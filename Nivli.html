@@ -1,0 +1,1502 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><meta name="referrer" content="no-referrer-when-downgrade"><title>Nivli: a quiet AI assistant for questions, writing and code</title>
+<meta name="description" content="Nivli is a calm AI assistant for everyday questions, writing, learning and coding, with chat history, memory and web search with sources.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nivli">
+<meta property="og:title" content="Nivli: a quiet AI assistant for questions, writing and code">
+<meta property="og:description" content="Nivli is a calm AI assistant for everyday questions, writing, learning and coding, with chat history, memory and web search with sources.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivli: a quiet AI assistant for questions, writing and code">
+<meta name="twitter:description" content="Nivli is a calm AI assistant for everyday questions, writing, learning and coding, with chat history, memory and web search with sources.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://YOUR-DOMAIN.com/#website", "url": "https://YOUR-DOMAIN.com/", "name": "Nivli", "description": "Nivli is a calm AI assistant for everyday questions, writing, learning and coding, with chat history, memory and web search with sources.", "inLanguage": "en"}, {"@type": "WebApplication", "@id": "https://YOUR-DOMAIN.com/#app", "name": "Nivli", "url": "https://YOUR-DOMAIN.com/", "applicationCategory": "ProductivityApplication", "operatingSystem": "Web", "description": "Nivli is a calm AI assistant for everyday questions, writing, learning and coding, with chat history, memory and web search with sources.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}]}</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJsdW1hIiB4MT0iOCIgeTE9IjgiIHgyPSI1OCIgeTI9IjU4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iIzU5NjlkNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNiYTk5NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcng9IjIwIiBmaWxsPSJ1cmwoI2x1bWEpIi8+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyI+PHBhdGggZD0iTTE4IDIxYzQtNC40IDguOC02LjYgMTQtNi42czEwIDIuMiAxNCA2LjZNMTMuNiAzMmM1LjQtNiAxMS42LTkgMTguNC05czEzIDMgMTguNCA5TTE4IDQzYzQtNC40IDguOC02LjYgMTQtNi42czEwIDIuMiAxNCA2LjYiLz48L2c+Cjwvc3ZnPg=="><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet"><style>
+:root{color-scheme:light;--bg:#faf9f5;--side:#f0eee6;--surface:#fff;--raised:#f5f4ee;--hover:#ebe9e0;--line:#e5e3d8;--ink:#1f1e1d;--muted:#75736b;--accent:#c96442;--accent-2:#b4573a;--on-accent:#fff;--danger:#b3412a;--ok:#4f7d56;--shadow:0 1px 2px #1f1e1d0d,0 8px 28px #1f1e1d12;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--mono:ui-monospace,"Cascadia Code",Consolas,monospace}
+html[data-theme=dark]{color-scheme:dark;--bg:#262624;--side:#1f1e1d;--surface:#30302e;--raised:#2b2a28;--hover:#383836;--line:#3d3c39;--ink:#f0eee6;--muted:#9c9a92;--accent:#d97757;--accent-2:#e38a6c;--on-accent:#1f1e1d;--danger:#e8836a;--ok:#8fc197;--shadow:0 1px 2px #0004,0 10px 32px #0005}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+::selection{background:#d9775744}
+.desktop-break{display:none}
+.eyebrow,.auth-story,.shortcut,.suggestion-icon,.suggestion-arrow,.composer-hint-dot,.message-avatar,.profile-more,.option-marker,.settings-color-label,.popover-icon,.history-item-icon{display:none!important}
+
+/* brand */
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}.brand.centered{justify-content:center}
+.brand-mark{display:grid;place-items:center;width:29px;height:29px;border-radius:10px;background:linear-gradient(145deg,#f6c6a7,#e98c68);overflow:hidden;flex:none}.brand-mark svg{width:25px;height:25px;fill:none;stroke:#fff9f1;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+html[data-theme=dark] .brand-mark{background:linear-gradient(145deg,#f1b18f,#dd7858)}
+.brand-mark.small{width:23px;height:23px;border-radius:8px}.brand-mark.small svg{width:20px;height:20px}
+.brand-name,.mobile-brand strong{font:800 21px/1 Manrope,sans-serif;letter-spacing:-1.1px}.brand-period{color:#ec875e}
+
+/* buttons */
+.primary-button,.settings-done{border:0;border-radius:10px;background:var(--accent);color:var(--on-accent);padding:10px 16px;font-weight:600;font-size:13.5px;transition:background .15s}
+.primary-button:hover:not(:disabled),.settings-done:hover{background:var(--accent-2)}.primary-button:disabled{opacity:.45;cursor:not-allowed}
+.settings-close,.back-button{border:1px solid var(--line);border-radius:10px;background:transparent;padding:9px 14px;font-weight:500;font-size:13px}.settings-close:hover,.back-button:hover{background:var(--hover)}.back-button{border-color:transparent;color:var(--muted)}
+.theme-toggle,.top-new,.mobile-menu-toggle{display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:8px;background:transparent;color:var(--muted);transition:background .15s,color .15s}
+.theme-toggle:hover,.top-new:hover,.mobile-menu-toggle:hover{background:var(--hover);color:var(--ink)}
+.theme-toggle svg,.top-new svg,.mobile-menu-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.top-new,.mobile-menu-toggle,.mobile-brand{display:none}
+
+/* sign-in and onboarding */
+.gate-screen{position:relative;min-height:100dvh;display:grid;place-items:center;padding:24px;background:var(--bg)}
+.gate-theme{position:absolute;top:16px;right:16px}
+.gate-card,.onboard-card{width:min(100%,400px);padding:36px 32px;border:1px solid var(--line);border-radius:18px;background:var(--surface);text-align:center}
+.onboard-card{text-align:left;width:min(100%,460px)}.gate-card>.brand,.onboard-card>.brand{margin-bottom:28px}
+.gate-card h1,.welcome-step h1{margin:0;font:500 clamp(28px,6vw,34px)/1.2 var(--serif);letter-spacing:-.015em}
+.gate-card h1 em,.welcome-step h1 em,.welcome h1 em{font-style:normal}
+.gate-copy,.welcome-step>p{margin:12px auto 24px;max-width:320px;color:var(--muted);font-size:14px;line-height:1.6}
+.google-button-wrap{display:flex;justify-content:center;min-height:42px}
+.google-disabled{display:flex;align-items:center;gap:10px;height:42px;padding:0 20px;border:1px solid var(--line);border-radius:10px;background:var(--raised);color:var(--muted);font-weight:500}.google-g{font:700 16px Arial,sans-serif}
+.setup-notice{min-height:16px;margin:12px auto 0;color:var(--danger);font-size:12.5px}
+.tiny-note{margin:20px 0 0;color:var(--muted);font-size:12px}.tiny-note a{text-decoration:underline;text-underline-offset:2px}
+.welcome-step{text-align:center;padding:4px 0}.finish-check{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 16px;border-radius:50%;background:var(--raised);color:var(--ok);font-size:20px}
+.progress-header{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.progress-header i{font-style:normal}
+.progress-track{height:3px;margin:10px 0 24px;border-radius:3px;background:var(--line);overflow:hidden}.progress-track>span{display:block;height:100%;background:var(--accent);transition:width .2s}
+.question-step h2,.username-step h2{margin:0 0 6px;font:500 22px/1.3 var(--serif)}.question-hint{margin:0 0 16px;color:var(--muted);font-size:13px}
+.answer-options{display:grid;gap:8px}.answer-option{display:flex;align-items:center;width:100%;min-height:44px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:transparent;text-align:left;transition:background .15s,border-color .15s}
+.answer-option:hover{background:var(--hover)}.answer-option.selected{border-color:var(--accent);background:var(--raised)}
+.step-actions{display:flex;align-items:center;justify-content:space-between;margin-top:20px}
+.username-field{display:flex;align-items:center;gap:6px;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}.username-field:focus-within{border-color:var(--accent)}
+.username-field>span{color:var(--muted)}.username-field input{flex:1;min-width:0;border:0;outline:0;background:none}
+.availability{height:18px;margin:6px 0 0;color:var(--muted);font-size:12px}.availability.available{color:var(--ok)}.availability.taken{color:var(--danger)}
+.onboard-error{margin-top:14px;padding:10px 12px;border:1px solid var(--danger);border-radius:10px;color:var(--danger);font-size:13px}
+
+/* shell */
+.app-shell{display:grid;grid-template-columns:268px minmax(0,1fr);height:100dvh}
+.sidebar-backdrop{display:none}
+.sidebar{display:flex;flex-direction:column;min-height:0;padding:16px 12px 12px;background:var(--side);border-right:1px solid var(--line)}
+.sidebar>.brand{margin:2px 8px 18px}
+.new-chat{display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border:0;border-radius:10px;background:transparent;color:var(--ink);font-weight:500}.new-chat:hover{background:var(--hover)}
+.new-chat svg{width:16px;height:16px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round}
+.history-section{display:flex;flex-direction:column;flex:1;min-height:0;margin-top:14px}
+.history-heading{display:flex;align-items:center;justify-content:space-between;padding:0 10px 6px;color:var(--muted);font-size:12px;font-weight:500}
+.history-heading span{text-transform:lowercase}.history-heading span::first-letter{text-transform:uppercase}
+.history-heading button{width:24px;height:24px;border:0;border-radius:6px;background:transparent;color:var(--muted)}.history-heading button:hover{background:var(--hover);color:var(--ink)}
+.history-search-wrap{display:flex;align-items:center;gap:8px;height:34px;margin:0 2px 8px;padding:0 10px;border-radius:8px;background:var(--raised);color:var(--muted)}.history-search-wrap:focus-within{outline:1px solid var(--line)}
+.history-search-wrap input{flex:1;min-width:0;border:0;outline:0;background:none;color:var(--ink);font-size:13px}
+.history-list{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:1px}
+.history-empty{margin:0;padding:6px 10px;color:var(--muted);font-size:13px}
+.history-row{display:grid;grid-template-columns:minmax(0,1fr) 26px 26px;align-items:center}
+.history-item{display:flex;min-width:0;width:100%;padding:7px 10px;border:0;border-radius:8px;background:transparent;text-align:left;color:var(--ink)}
+.history-row:hover,.history-item.active,.history-row:has(.active){background:var(--hover);border-radius:8px}
+.history-item-text{display:flex;flex-direction:column;min-width:0}.history-item-text strong{overflow:hidden;font-size:13.5px;font-weight:400;text-overflow:ellipsis;white-space:nowrap}.history-item-text small{color:var(--muted);font-size:11.5px}
+.history-action{width:26px;height:26px;border:0;border-radius:6px;background:transparent;color:var(--muted);opacity:0}.history-row:hover .history-action,.history-action:focus-visible{opacity:1}.history-action:hover{color:var(--ink);background:var(--line)}.history-delete:hover{color:var(--danger)}
+.sidebar-bottom{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.profile-wrap{position:relative}
+.profile{display:flex;align-items:center;gap:10px;width:100%;padding:7px 8px;border:0;border-radius:10px;background:transparent;text-align:left}.profile:hover{background:var(--hover)}
+.avatar,.avatar-img,.account-avatar{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:12px;object-fit:cover;flex:none}.avatar i{display:none}
+.profile-copy{min-width:0}.profile-copy strong,.profile-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.profile-copy strong{font-size:13px;font-weight:500}.profile-copy small{max-width:170px;color:var(--muted);font-size:11.5px}
+.profile-menu{position:absolute;left:0;right:0;bottom:calc(100% + 6px);z-index:20;padding:6px;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.menu-user{padding:8px 10px;border-bottom:1px solid var(--line);margin-bottom:4px}.menu-user strong,.menu-user small{display:block}.menu-user small{color:var(--muted);font-size:12px}
+.profile-menu>button,.profile-menu>a{display:block;width:100%;padding:8px 10px;border:0;border-radius:8px;background:transparent;text-align:left;text-decoration:none;font-size:13.5px}.profile-menu>button:hover,.profile-menu>a:hover{background:var(--hover)}.profile-menu #signout-button{color:var(--danger)}.plans-nav-link span{display:none}.plans-nav-link strong{font-weight:400}
+
+/* main */
+.main-panel{display:flex;flex-direction:column;min-width:0;min-height:0;height:100dvh;background:var(--bg)}
+.topbar{display:flex;align-items:center;justify-content:space-between;flex:none;height:52px;padding:0 16px 0 24px}
+.mode-label{color:var(--muted);font-size:13px}.topbar-right{display:flex;align-items:center;gap:6px}
+.model-badge{display:flex;align-items:center;gap:7px;padding:5px 10px;border-radius:8px;color:var(--muted);font-size:12.5px}
+.status-dot,.model-picker-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none}.model-unavailable .status-dot{background:var(--muted)}
+.chat-area{display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto}
+
+/* welcome */
+.welcome{width:min(640px,calc(100% - 40px));margin:auto;padding:24px 0;text-align:center}
+.welcome h1{margin:0;font:400 clamp(32px,5vw,44px)/1.15 var(--serif);letter-spacing:-.02em}
+.welcome-copy{max-width:420px;margin:14px auto 28px;color:var(--muted);font-size:15px;line-height:1.6}
+.suggestions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.suggestion{display:block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:transparent;text-align:left;transition:background .15s}.suggestion:hover{background:var(--hover)}
+.suggestion strong{font-weight:500;font-size:13px}.suggestion small{display:none}
+
+/* messages */
+.messages{display:flex;flex-direction:column;gap:22px;width:min(720px,calc(100% - 40px));margin:0 auto;padding:12px 0 28px}.messages:empty{display:none}
+.message{display:flex;flex-wrap:wrap;align-items:flex-start;animation:rise .25s ease both}.message.user{justify-content:flex-end}
+@keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.message-content{max-width:100%;overflow-wrap:anywhere;white-space:pre-wrap;font-size:15px;line-height:1.7}
+.message.user .message-content{max-width:82%;padding:9px 14px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.assistant-content{flex:1 1 100%;font:400 16.5px/1.75 var(--serif)}
+html[data-text-size=large] .message-content{font-size:17px}html[data-text-size=large] .assistant-content{font-size:18.5px}
+.reply-prose{margin:0 0 12px}.reply-prose:last-child{margin:0}
+.reply-prose code,.assistant-content code{padding:1px 5px;border-radius:5px;background:var(--raised);font:.88em var(--mono)}
+.assistant-content a{color:var(--accent);text-underline-offset:2px}
+.code-block{margin:12px 0;border:1px solid var(--line);border-radius:10px;background:var(--side);overflow:hidden;white-space:normal}
+.code-head{display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 6px 0 12px;border-bottom:1px solid var(--line);color:var(--muted);font:12px var(--sans)}
+.copy-code{padding:4px 9px;border:0;border-radius:6px;background:transparent;color:var(--muted);font-size:12px}.copy-code:hover{background:var(--hover);color:var(--ink)}
+.code-block pre{margin:0;padding:12px 14px;overflow:auto;white-space:pre;font:13px/1.6 var(--mono);color:var(--ink)}
+.source-list{margin-top:14px;font:13px var(--sans);white-space:normal}
+.source-list summary{display:inline-flex;align-items:center;gap:8px;padding:5px 10px 5px 8px;border:1px solid var(--line);border-radius:8px;color:var(--muted);cursor:pointer;list-style:none;user-select:none}
+.source-list summary::-webkit-details-marker{display:none}
+.source-list summary::before{content:"";width:14px;height:14px;background:currentColor;opacity:.8;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") center/contain no-repeat}
+.source-list summary:hover{background:var(--hover);color:var(--ink)}
+.source-chips{display:flex;flex-direction:column;gap:2px;margin-top:8px;border-left:1px solid var(--line);padding-left:12px}
+.source-chips a{display:block;overflow:hidden;padding:5px 8px;border-radius:7px;color:var(--ink);text-decoration:none;text-overflow:ellipsis;white-space:nowrap}.source-chips a:hover{background:var(--hover);color:var(--accent)}
+.message-images{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}.message-images img{max-width:220px;max-height:180px;border-radius:10px;object-fit:cover}
+.message-time{display:none}
+.assistant-actions,.user-message-actions{display:flex;align-items:center;gap:2px;flex:1 1 100%;margin-top:6px;font:12px var(--sans)}.user-message-actions{justify-content:flex-end}
+.assistant-actions button,.message-action-button{display:grid;place-items:center;min-width:28px;height:28px;padding:0 6px;border:0;border-radius:6px;background:transparent;color:var(--muted);font-size:12px}.assistant-actions button:hover,.message-action-button:hover{background:var(--hover);color:var(--ink)}
+.message-more-wrap{position:relative}.message-more-menu{position:absolute;left:0;bottom:calc(100% + 4px);z-index:5;min-width:160px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:var(--shadow)}
+.message-more-menu button{display:block;width:100%;padding:7px 10px;border:0;border-radius:6px;background:transparent;text-align:left;font-size:13px}.message-more-menu button:hover{background:var(--hover)}
+.typing{display:flex;align-items:center;gap:5px;padding:8px 0}.typing span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dot .9s infinite alternate}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes dot{to{opacity:.3;transform:translateY(-3px)}}.message-content:has(.typing){display:flex;align-items:center;gap:8px}.thinking-label{color:var(--muted);font:14px var(--sans)}
+.stream-cursor{display:inline-block;width:7px;height:16px;margin-left:2px;vertical-align:-2px;border-radius:2px;background:var(--accent);animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}
+.reply-stopped{display:block;margin-top:6px;color:var(--muted);font:12px var(--sans)}
+
+/* composer */
+.composer-wrap{flex:none;width:min(720px,calc(100% - 40px));margin:0 auto;padding:0 0 12px}
+.composer{padding:12px 14px 10px;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:var(--shadow);transition:border-color .15s}.composer:focus-within{border-color:var(--muted)}
+.composer textarea{display:block;width:100%;min-height:28px;max-height:180px;padding:2px;border:0;outline:0;resize:none;background:transparent;font-size:15px;line-height:1.6}.composer textarea::placeholder{color:var(--muted)}
+.attachment-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}.attachment-preview{position:relative;max-width:180px;border:1px solid var(--line);border-radius:10px;background:var(--raised);overflow:hidden;font-size:12px}.attachment-preview img{display:block;max-width:100%;max-height:90px;object-fit:cover}
+.composer-tools{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:6px}
+.composer-left,.composer-actions{display:flex;align-items:center;gap:6px}.popover-anchor{position:relative}
+.composer-icon-button,.voice-button{display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:8px;background:transparent;color:var(--muted)}.composer-icon-button:hover,.voice-button:hover{background:var(--hover);color:var(--ink)}
+.composer-icon-button svg,.voice-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.voice-button.is-listening{color:var(--accent)}
+.model-picker-button{display:flex;align-items:center;gap:7px;height:32px;padding:0 10px;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:13px}.model-picker-button:hover{background:var(--hover);color:var(--ink)}.model-picker-chevron{margin-top:-4px}
+.composer-popover{position:absolute;bottom:calc(100% + 10px);left:0;z-index:30;width:min(300px,calc(100vw - 36px));padding:6px;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.composer-popover>p{margin:4px 10px 6px;color:var(--muted);font-size:12px;line-height:1.5}
+.popover-action,.model-option{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-radius:8px;background:transparent;text-align:left}.popover-action:hover,.model-option:hover,.model-option.selected{background:var(--hover)}
+.popover-action strong,.model-option strong{display:block;font-size:13.5px;font-weight:500}.popover-action small,.model-option small{display:block;color:var(--muted);font-size:12px}.popover-action[aria-pressed=true] strong{color:var(--accent)}
+.model-option-check{margin-left:auto;color:var(--accent)}
+.composer-hint{color:var(--muted);font-size:12px}.char-count,.voice-status{color:var(--muted);font-size:12px}
+.send-button{display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:9px;background:var(--accent);color:var(--on-accent)}.send-button:disabled{background:var(--raised);color:var(--muted);cursor:default}
+.send-button svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.stop-icon{fill:currentColor!important;stroke:none!important}
+.disclaimer{margin:8px 0 0;text-align:center;color:var(--muted);font-size:12px}
+.error-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;padding:9px 12px;border:1px solid var(--danger);border-radius:10px;color:var(--danger);font-size:13px}.error-detail{flex:1 1 100%;opacity:.85}
+.error-banner button{border:1px solid currentColor;border-radius:7px;background:transparent;padding:4px 10px;color:inherit;font-size:12px;font-weight:500}
+
+/* settings */
+.settings-dialog{width:min(860px,calc(100vw - 32px));height:min(620px,calc(100dvh - 32px));max-width:none;max-height:none;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);box-shadow:var(--shadow);overflow:hidden}.settings-dialog::backdrop{background:#0008}
+.settings-layout{display:grid;grid-template-columns:220px minmax(0,1fr);height:100%}
+.settings-sidebar{display:flex;flex-direction:column;gap:8px;padding:16px 12px;background:var(--side);border-right:1px solid var(--line);overflow-y:auto}
+.settings-back{display:flex;gap:8px;padding:8px 10px;border:0;border-radius:8px;background:transparent;text-align:left;color:var(--muted)}.settings-back:hover{background:var(--hover);color:var(--ink)}
+.settings-search-wrap{display:flex;align-items:center;gap:8px;height:34px;padding:0 10px;border-radius:8px;background:var(--raised);color:var(--muted)}.settings-search-wrap input{flex:1;min-width:0;border:0;outline:0;background:none;color:var(--ink);font-size:13px}
+.settings-nav-label{margin:10px 10px 2px;color:var(--muted);font-size:12px;text-transform:lowercase}.settings-nav-label::first-letter{text-transform:uppercase}
+.settings-navigation{display:flex;flex-direction:column;gap:1px}.settings-navigation button{display:flex;gap:10px;padding:8px 10px;border:0;border-radius:8px;background:transparent;text-align:left;color:var(--muted)}.settings-navigation button:hover{background:var(--hover);color:var(--ink)}.settings-navigation button.active{background:var(--hover);color:var(--ink);font-weight:500}.settings-no-results{margin:6px 10px;color:var(--muted);font-size:13px}
+.settings-content{display:flex;flex-direction:column;min-width:0;min-height:0;overflow-y:auto;padding:28px 32px}
+.settings-content-head h2{margin:0;font:500 24px/1.2 var(--serif)}.settings-content-head p{margin:6px 0 24px;color:var(--muted)}
+.settings-section>h3{margin:0 0 4px;font-size:15px;font-weight:600}.settings-section>p,.account-settings-group>p{margin:0 0 16px;color:var(--muted);font-size:13.5px}
+.settings-select,.memory-label{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-weight:500;font-size:13.5px}
+.settings-select select,.memory-label textarea{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-weight:400;outline:0}.settings-select select:focus,.memory-label textarea:focus{border-color:var(--muted)}.memory-label textarea{resize:vertical;line-height:1.5}.memory-label textarea:disabled{opacity:.55}
+.memory-scope{color:var(--muted);font-weight:400;font-size:12px}
+.settings-check{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}.settings-check input{margin-top:3px;accent-color:var(--accent)}.settings-check strong{display:block;font-weight:500}.settings-check small{color:var(--muted);font-size:12.5px}
+.theme-choices{display:flex;gap:8px;margin-bottom:20px}.theme-choices button{flex:1;padding:9px;border:1px solid var(--line);border-radius:10px;background:transparent}.theme-choices button:hover{background:var(--hover)}.theme-choices button[aria-pressed=true]{border-color:var(--accent);background:var(--raised);font-weight:500}
+.memory-controls{display:flex;flex-direction:column;gap:12px;margin-top:8px;color:var(--muted);font-size:12.5px}.memory-buttons{display:flex;flex-wrap:wrap;gap:8px}
+.account-settings-group{margin-bottom:28px}.account-settings-group>h3{margin:0 0 8px;font-size:15px;font-weight:600}
+.account-identity{display:flex;align-items:center;gap:12px}.account-identity p{margin:0;color:var(--muted)}.account-avatar{width:40px;height:40px;font-size:15px}
+.account-settings-link{color:var(--accent);text-decoration:none;font-weight:500}.account-settings-link:hover{text-decoration:underline}
+.account-plan-summary{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}.account-plan-summary p{margin:2px 0 0;color:var(--muted);font-size:13px}.account-plan-badge{padding:2px 9px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+
+@media(max-width:720px){
+.app-shell{display:block}
+.sidebar{position:fixed;inset:0 auto 0 0;z-index:61;width:min(300px,calc(100vw - 48px));height:100dvh;transform:translateX(-105%);transition:transform .22s ease;box-shadow:var(--shadow)}.sidebar.mobile-open{transform:none}
+.sidebar-backdrop:not([hidden]){position:fixed;inset:0;z-index:60;display:block;width:100%;height:100%;border:0;background:#0007}
+.mobile-menu-toggle,.top-new{display:grid}.mobile-brand{display:flex;align-items:center;gap:7px;padding:0;border:0;background:none;color:var(--ink)}
+.topbar{justify-content:flex-start;gap:8px;padding:0 10px}.topbar-right{margin-left:auto}.mode-label{display:none}.model-badge{padding:4px 6px}
+.welcome h1{font-size:32px}.assistant-content{font-size:16px}.composer-wrap{width:calc(100% - 20px);padding-bottom:max(10px,env(safe-area-inset-bottom))}.messages{width:calc(100% - 28px)}
+.composer-hint{display:none}
+.settings-dialog{width:100vw;height:100dvh;max-height:100dvh;border:0;border-radius:0}.settings-layout{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
+.settings-sidebar{flex-direction:row;flex-wrap:wrap;align-items:center;border-right:0;border-bottom:1px solid var(--line);overflow:visible}.settings-nav-label,.settings-search-wrap{display:none}.settings-navigation{flex-direction:row;overflow-x:auto;width:100%}.settings-navigation button{white-space:nowrap}.settings-content{padding:20px 16px}
+.gate-card,.onboard-card{padding:28px 22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<noscript><main style="max-width:560px;margin:15vh auto;padding:0 20px;font-family:sans-serif"><h1>Nivli</h1><p>Nivli is an AI assistant for questions, writing, learning and code. Turn on JavaScript to sign in and start chatting. <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p></main></noscript>
+<section class="gate-screen" id="auth-screen" hidden><button class="theme-toggle gate-theme" type="button" data-theme-toggle aria-label="Switch color theme"></button><aside class="auth-story"><a class="brand auth-story-brand" href="#"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 10.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3M6.8 16c2.7-3 5.8-4.5 9.2-4.5s6.5 1.5 9.2 4.5M9 21.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3"/></svg></span><span class="brand-name">nivli<span class="brand-period">.</span></span></a><div class="auth-story-copy"><span class="auth-pill"><i></i> YOUR SPACE, YOUR PACE</span><h2>A little more room<br>for <em>what’s possible.</em></h2><p>Thoughtful AI for the questions, ideas, and plans that move you forward.</p></div><div class="auth-preview"><div class="preview-dots"><i></i><i></i><i></i><span>nivli assistant</span></div><div class="preview-user">Help me make sense of a big idea.</div><div class="preview-answer"><span class="preview-spark">✳</span><span>Let’s break it down together.<br><small>One clear step at a time.</small></span></div></div><span class="auth-story-foot">A LITTLE SPACE TO THINK</span></aside><div class="gate-card"><a class="brand centered" href="#"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 10.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3M6.8 16c2.7-3 5.8-4.5 9.2-4.5s6.5 1.5 9.2 4.5M9 21.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3"/></svg></span><span class="brand-name">nivli<span class="brand-period">.</span></span></a><p class="eyebrow">A LITTLE SPACE TO THINK</p><h1>Meet your new<br><em>thinking partner.</em></h1><p class="gate-copy">A quieter place to ask, explore, and make things. Sign in to get started.</p><div class="google-button-wrap"><div id="google-button"></div><button class="google-disabled" id="google-disabled" type="button" disabled><span class="google-g">G</span>Continue with Google</button></div><p class="setup-notice" id="auth-notice" role="status"></p><p class="tiny-note">By continuing you agree to our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a>.</p></div></section>
+<section class="gate-screen" id="onboarding-screen" hidden><button class="theme-toggle gate-theme" type="button" data-theme-toggle aria-label="Switch color theme"></button><aside class="auth-story onboarding-story"><a class="brand auth-story-brand" href="#"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 10.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3M6.8 16c2.7-3 5.8-4.5 9.2-4.5s6.5 1.5 9.2 4.5M9 21.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3"/></svg></span><span class="brand-name">nivli<span class="brand-period">.</span></span></a><div class="auth-story-copy"><span class="auth-pill"><i></i> MADE FOR YOU</span><h2>Your way of thinking<br>deserves <em>its own space.</em></h2><p>A few quick choices help make Nivli feel more like yours.</p></div><div class="onboarding-steps"><span class="step-current">✳</span><span>A FEW SHORT QUESTIONS</span></div><span class="auth-story-foot">SET UP ONCE. MAKE IT YOURS.</span></aside><div class="onboard-card"><a class="brand centered" href="#"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 10.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3M6.8 16c2.7-3 5.8-4.5 9.2-4.5s6.5 1.5 9.2 4.5M9 21.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3"/></svg></span><span class="brand-name">nivli<span class="brand-period">.</span></span></a><div id="onboarding-content"></div><div class="onboard-error" id="onboard-error" role="alert" hidden></div></div></section>
+<div class="app-shell" id="chat-screen" hidden><button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Close navigation" hidden></button><aside class="sidebar">
+<a class="brand" href="#" data-new-chat><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 10.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3M6.8 16c2.7-3 5.8-4.5 9.2-4.5s6.5 1.5 9.2 4.5M9 21.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3"/></svg></span><span class="brand-name">nivli<span class="brand-period">.</span></span></a>
+<button class="new-chat" type="button" data-new-chat><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>New chat</span><span class="shortcut">Ctrl K</span></button>
+<section class="history-section" aria-label="Recent chats"><div class="history-heading"><span>RECENTS</span><button id="history-refresh" type="button" aria-label="Refresh chat history" title="Refresh history">↻</button></div><label class="history-search-wrap"><span aria-hidden="true">⌕</span><input id="history-search" type="search" placeholder="Search chats" aria-label="Search chat history"></label><div id="history-list" class="history-list" aria-live="polite"><p class="history-empty">Your conversations will appear here.</p></div></section>
+<div class="sidebar-bottom"><div class="profile-wrap"><button class="profile" id="profile-button" type="button" aria-expanded="false"><img class="avatar-img" id="profile-picture" alt="" hidden><div class="avatar" id="profile-avatar" aria-hidden="true"><i></i><i></i><i></i></div><div class="profile-copy"><strong id="profile-name">Nivli</strong><small id="profile-email"></small></div><span class="profile-more">···</span></button><div class="profile-menu" id="profile-menu" hidden><div class="menu-user"><strong id="menu-username"></strong><small id="menu-email"></small></div><button type="button" id="open-settings">Settings</button><a class="plans-nav-link" href="/plans.html"><span aria-hidden="true">◈</span><strong>Plans</strong></a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><button type="button" id="signout-button" data-signout>Sign out</button></div></div></div>
+</aside><main class="main-panel"><header class="topbar"><button class="mobile-menu-toggle" id="mobile-menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><button class="mobile-brand" type="button" data-new-chat><span class="brand-mark small" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 10.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3M6.8 16c2.7-3 5.8-4.5 9.2-4.5s6.5 1.5 9.2 4.5M9 21.5c2-2.2 4.4-3.3 7-3.3s5 1.1 7 3.3"/></svg></span><strong>nivli<span class="brand-period">.</span></strong></button><span class="mode-label" id="mode-label">Chat Mode</span><div class="topbar-right"><span class="model-badge" id="model-badge"><span class="status-dot"></span><span id="model-label">Checking connection…</span></span><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme"></button><button class="top-new" type="button" data-new-chat aria-label="Start a new chat"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button></div></header><section class="chat-area" aria-label="Conversation"><div class="welcome" id="chat-welcome"><p class="eyebrow" id="welcome-eyebrow">A LITTLE SPACE TO THINK</p><h1 id="welcome-heading">Good things start<br>with a <em>question.</em></h1><p class="welcome-copy" id="welcome-copy">Curious about something? Need a fresh perspective?<br class="desktop-break"> I’m here to help you figure it out.</p><div class="suggestions" id="suggestions"><button class="suggestion" data-prompt="Help me plan a calm, productive week."><span class="suggestion-icon peach">✳</span><span><strong>Find your flow</strong><small>Plan a balanced week</small></span><span class="suggestion-arrow">↗</span></button><button class="suggestion" data-prompt="Explain a tricky idea in a simple, friendly way."><span class="suggestion-icon lavender">⌘</span><span><strong>Make it make sense</strong><small>Untangle a tricky idea</small></span><span class="suggestion-arrow">↗</span></button><button class="suggestion" data-prompt="Give me three creative ideas for something fun to do this weekend."><span class="suggestion-icon yellow">✦</span><span><strong>Get inspired</strong><small>Find a new idea to try</small></span><span class="suggestion-arrow">↗</span></button></div></div><div class="messages" id="messages" aria-live="polite"></div></section><div class="composer-wrap"><div class="error-banner" id="error-banner" role="alert" hidden><span id="error-text"></span><small id="error-detail" class="error-detail" hidden></small><button id="retry-button" type="button">Retry</button></div><form class="composer" id="chat-form"><div class="attachment-strip" id="attachment-strip" aria-live="polite" hidden></div><textarea id="message-input" rows="1" maxlength="4000" placeholder="Ask me anything…" aria-label="Your message"></textarea><div class="composer-tools"><div class="composer-left"><div class="popover-anchor"><button class="composer-icon-button" id="tools-button" type="button" aria-label="Open tools" aria-expanded="false" title="Add images"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><div class="composer-popover tools-popover" id="tools-menu" hidden><button class="popover-action" id="attach-images-button" type="button"><span class="popover-icon">▧</span><span><strong>Add images</strong><small>JPEG, PNG, or WebP · paste screenshots with Ctrl+V</small></span></button><button class="popover-action" id="attach-text-button" type="button"><span class="popover-icon">▤</span><span><strong>Add a text or code file</strong><small>TXT, MD, JS, TS, JSON, HTML, CSS, or PY</small></span></button><button class="popover-action" id="insert-code-button" type="button"><span class="popover-icon">&lt;/&gt;</span><span><strong>Insert a code block</strong><small>Start a formatted code snippet</small></span></button><button class="popover-action" id="switch-mode-button" type="button"><span class="popover-icon">⌘</span><span><strong>Switch to Script Mode</strong><small>Get help with code and scripts</small></span></button><button class="popover-action" id="toggle-web-search-button" type="button" aria-pressed="false"><span class="popover-icon">⌕</span><span><strong>Always search the web</strong><small>Search every message and attach source links</small></span></button><p>Nivli automatically searches for current information. Turn this on to search every message. Search results are used to help write a sourced answer.</p><p>Attached content is included with your message.</p></div></div><input id="image-input" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden><input id="text-file-input" type="file" accept=".txt,.md,.js,.ts,.json,.html,.css,.py,.jsx,.tsx,.xml,.yml,.yaml,.csv" hidden><div class="popover-anchor"><button class="model-picker-button" id="model-picker-button" type="button" aria-expanded="false" aria-label="Choose a Nivli model"><span class="model-picker-dot"></span><span id="selected-model-name">Nollent 4</span><span class="model-picker-chevron">⌄</span></button><div class="composer-popover model-popover" id="model-menu" hidden><div id="model-options" role="group" aria-label="Available Nivli models"></div><p>Choose the model that fits your task. Some models may not be available on your plan.</p></div></div></div></div><span class="composer-hint"><span class="composer-hint-dot"></span><span id="composer-context-label">Memory off · settings</span></span><div class="composer-actions"><span class="char-count" id="char-count"></span><button class="voice-button" id="voice-button" type="button" aria-label="Start voice input" title="Dictate a message"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3m-3 0h6"></path></svg></button><span class="voice-status" id="voice-status" role="status" aria-live="polite"></span><button class="send-button" id="send-button" type="submit" aria-label="Send message" title="Send message" disabled><svg class="send-icon" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></svg><svg class="stop-icon" viewBox="0 0 24 24" hidden><rect x="7" y="7" width="10" height="10" rx="2"/></svg></button></div></div></form><p class="disclaimer">Nivli can make mistakes. Check important details.</p></div></main></div><dialog class="settings-dialog" id="settings-dialog" aria-labelledby="settings-title"><div class="settings-layout"><aside class="settings-sidebar"><button class="settings-back" id="settings-close" type="button"><span aria-hidden="true">←</span> Back to app</button><label class="settings-search-wrap"><span aria-hidden="true">⌕</span><input id="settings-search" type="search" placeholder="Search settings" aria-label="Search settings"></label><p class="settings-nav-label">PERSONAL</p><nav class="settings-navigation" aria-label="Settings categories"><button class="active" type="button" data-settings-tab="general">⚙ <span>General</span></button><button type="button" data-settings-tab="appearance">☼ <span>Appearance</span></button><button type="button" data-settings-tab="personalization">◉ <span>Personalization &amp; memory</span></button><button type="button" data-settings-tab="account">◎ <span>Account</span></button></nav><p class="settings-no-results" id="settings-no-results" hidden>No matching setting categories.</p></aside><main class="settings-content"><header class="settings-content-head"><h2 id="settings-title">General</h2><p id="settings-description">Choose how Nivli behaves in your chats.</p></header><div class="settings-panels"><section class="settings-section" data-settings-panel="general"><h3>General</h3><p>Choose a comfortable reading size and how messages are sent.</p><label class="settings-select">Text size<select id="text-size-setting"><option value="normal">Default</option><option value="large">Larger</option></select></label><label class="settings-check"><input id="enter-send-setting" type="checkbox"><span><strong>Press Enter to send</strong><small>Turn this off to use Enter for a new line.</small></span></label></section><section class="settings-section" data-settings-panel="appearance" hidden><h3>Appearance</h3><p>Choose how Nivli looks on this device.</p><div class="theme-choices" role="group" aria-label="Color theme"><button type="button" data-setting-theme="light">Light</button><button type="button" data-setting-theme="dark">Dark</button><button type="button" data-setting-theme="system">System</button></div><label class="settings-color-label" for="custom-surface-setting"><span><strong>Light background and surfaces</strong><small>Changes the white areas in light mode. Choose a light tint to keep text easy to read.</small></span><input id="custom-surface-setting" type="color" aria-label="Choose the light background color" value="#ffffff"></label><label class="settings-color-label" for="custom-accent-setting"><span><strong>Gradients and buttons</strong><small>Accent color.</small></span><input id="custom-accent-setting" type="color" aria-label="Choose gradient and button color" value="#8b5cf6"></label><label class="settings-color-label" for="custom-glow-setting"><span><strong>Background glow</strong><small>Choose the color of the soft ambient gradient behind the chat.</small></span><input id="custom-glow-setting" type="color" aria-label="Choose the chat background glow color" value="#8b5cf6"></label></section><section class="settings-section" data-settings-panel="personalization" hidden><h3>Personalization &amp; memory</h3><p>Tell Nivli what to know about you and how you want it to respond. These account-wide instructions are included in your chats. They are separate from saved memory and can be cleared anytime.</p><label class="memory-label" for="custom-about-setting">What should Nivli know about you?<textarea id="custom-about-setting" maxlength="1200" rows="4" placeholder="Your goals, interests, role, or useful preferences."></textarea></label><label class="memory-label" for="custom-response-setting">How do you want Nivli to respond?<textarea id="custom-response-setting" maxlength="1200" rows="4" placeholder="For example: be concise, explain step by step, or use simple language."></textarea></label><label class="settings-select">Answer length<select id="response-style-setting"><option value="auto">Match what I ask for</option><option value="concise">Short and direct</option><option value="balanced">Balanced</option><option value="detailed">Detailed</option></select></label><label class="settings-select">Conversation history<select id="context-depth-setting"><option value="8">Recent · 8 messages</option><option value="16">More context · 16 messages</option><option value="32">Deep context · 32 messages</option></select></label><label class="settings-check"><input id="memory-enabled-setting" type="checkbox"><span><strong>Use saved memory in chats</strong><small>When enabled, your account-wide note is included in your chats. Chat-only memory is sent only in its own conversation.</small></span></label><label class="memory-label" for="memory-setting">Your saved memory for all chats<textarea id="memory-setting" maxlength="1200" rows="4" placeholder="Add details you want available in future chats."></textarea></label><label class="memory-label" for="chat-memory-setting">Memory for this conversation<textarea id="chat-memory-setting" maxlength="1200" rows="3" placeholder="Start a conversation to add a chat-only memory." disabled></textarea><small class="memory-scope">This note stays with this conversation and is not used in your other chats.</small></label><div class="memory-controls"><span id="memory-save-status" role="status">Account memory is sent only when enabled; chat memory is sent only in this conversation.</span><div class="memory-buttons"><button class="settings-close" id="clear-memory-setting" type="button">Clear all personalization</button><button class="settings-done" id="save-memory-setting" type="button">Save changes</button></div></div></section><section class="settings-section settings-account" data-settings-panel="account" hidden><div class="account-settings-group"><h3>Profile</h3><div class="account-identity"><span class="account-avatar" id="settings-account-avatar" aria-hidden="true">N</span><div><strong id="settings-account-name">Nivli account</strong><p id="settings-account-label"></p></div></div></div><div class="account-settings-group"><h3>Sign-in and security</h3><p>You sign in with Google. Password and security settings are managed by Google.</p><a class="account-settings-link" href="https://myaccount.google.com/security" target="_blank" rel="noopener noreferrer">Manage Google security <span aria-hidden="true">↗</span></a></div><div class="account-settings-group"><h3>Plan</h3><div class="account-plan-summary"><span class="account-plan-badge">Free</span><div><strong>Free plan</strong><p>Paid plan access is not active. PayFast buttons currently open Sandbox only, and a Sandbox return does not activate features.</p></div></div><a class="account-settings-link" href="/plans.html">View plans <span aria-hidden="true">→</span></a></div></section></div></main></div></dialog><script>
+const AI_ERROR = "Nivli isn't working right now. Please try again later.";
+const questions = [
+  { title: "What will you mainly use Nivli for?", options: ["Everyday questions", "Coding and scripting", "School and learning", "Writing and creativity", "A bit of everything"] },
+  { title: "How would you describe your experience with coding?", options: ["Beginner", "Intermediate", "Advanced", "I don't code yet"] },
+  { title: "What kind of answers do you prefer?", options: ["Short and direct", "Detailed explanations", "Step-by-step guidance"] },
+  { title: "What should Nivli prioritize?", options: ["Speed", "Accuracy and explanations", "Coding help", "Balanced performance"] }
+];
+const authScreen = document.querySelector("#auth-screen");
+const onboardingScreen = document.querySelector("#onboarding-screen");
+const chatScreen = document.querySelector("#chat-screen");
+const sidebar = document.querySelector(".sidebar");
+const mobileMenuButton = document.querySelector("#mobile-menu-button");
+const sidebarBackdrop = document.querySelector("#sidebar-backdrop");
+const onboardingContent = document.querySelector("#onboarding-content");
+const onboardError = document.querySelector("#onboard-error");
+const authNotice = document.querySelector("#auth-notice");
+const messages = document.querySelector("#messages");
+const chatWelcome = document.querySelector("#chat-welcome");
+const input = document.querySelector("#message-input");
+const form = document.querySelector("#chat-form");
+const sendButton = document.querySelector("#send-button");
+const voiceButton = document.querySelector("#voice-button");
+const voiceStatus = document.querySelector("#voice-status");
+const errorBanner = document.querySelector("#error-banner");
+const retryButton = document.querySelector("#retry-button");
+const errorText = document.querySelector("#error-text");
+const errorDetail = document.querySelector("#error-detail");
+const charCount = document.querySelector("#char-count");
+const imageInput = document.querySelector("#image-input");
+const attachmentStrip = document.querySelector("#attachment-strip");
+let selectedImages = [];
+let config = null;
+let account = null;
+let availableModels = [];
+let activeModelId = "nollent-4";
+let mode = "chat";
+let history = [];
+let busy = false;
+let pending = null;
+let conversationId = null;
+let conversationMessages = [];
+let conversationMemory = "";
+let webSearchEnabled = false;
+let conversationList = [];
+let conversationSearch = "";
+let activeGeneration = null;
+let generationCounter = 0;
+let activeRecognition = null;
+let voiceDraft = "";
+
+function toggleVoiceInput() {
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    voiceStatus.textContent = "Voice input is not supported by this browser.";
+    return;
+  }
+  if (activeRecognition) {
+    activeRecognition.stop();
+    return;
+  }
+  const recognition = new Recognition();
+  recognition.lang = navigator.language || "en-US";
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  voiceDraft = input.value.trimEnd();
+  recognition.onstart = () => {
+    voiceButton.classList.add("is-listening");
+    voiceButton.setAttribute("aria-label", "Stop voice input");
+    voiceButton.title = "Stop voice input";
+    input.placeholder = "Listening…";
+    voiceStatus.textContent = "Listening for your message.";
+  };
+  recognition.onresult = event => {
+    const transcript = [...event.results].map(result => result[0].transcript).join("").trim();
+    input.value = `${voiceDraft}${voiceDraft && transcript ? " " : ""}${transcript}`;
+    refreshInput();
+  };
+  recognition.onerror = event => {
+    if (event.error !== "aborted" && event.error !== "no-speech") voiceStatus.textContent = `Voice input stopped: ${event.error}.`;
+  };
+  recognition.onend = () => {
+    if (activeRecognition === recognition) activeRecognition = null;
+    voiceButton.classList.remove("is-listening");
+    voiceButton.setAttribute("aria-label", "Start voice input");
+    voiceButton.title = "Dictate a message";
+    input.placeholder = "Ask me anything…";
+    if (voiceStatus.textContent === "Listening for your message.") voiceStatus.textContent = "Voice input finished.";
+  };
+  activeRecognition = recognition;
+  try { recognition.start(); }
+  catch { activeRecognition = null; voiceStatus.textContent = "Could not start voice input. Try again."; }
+}
+let gisPromise = null;
+try { activeModelId = localStorage.getItem("luma-model-id") || activeModelId; } catch {}
+
+function applyTheme(value) {
+  if (value === "system") value = window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = value;
+  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+    button.innerHTML = value === "dark"
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg>';
+    const next = value === "dark" ? "light" : "dark";
+    button.setAttribute("aria-label", `Switch to ${next} mode`);
+    button.title = `Switch to ${next} mode`;
+  });
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = value === "dark" ? "#262624" : "#faf9f5";
+}
+let initialTheme;
+try { initialTheme = localStorage.getItem("luma-theme"); } catch {}
+if (!["light", "dark", "system"].includes(initialTheme)) initialTheme = "system";
+let customAccent = "#8b5cf6";
+try { customAccent = localStorage.getItem("nivli-custom-accent") || customAccent; } catch {}
+function applyCustomAccent(value) {
+  if (!/^#[0-9a-f]{6}$/i.test(value)) value = "#8b5cf6";
+  customAccent = value;
+  document.documentElement.style.setProperty("--custom-accent", value);
+  try { localStorage.setItem("nivli-custom-accent", value); } catch {}
+}
+applyCustomAccent(customAccent);
+let customGlow = customAccent;
+try { customGlow = localStorage.getItem("nivli-custom-glow") || customGlow; } catch {}
+function applyCustomGlow(value) {
+  if (!/^#[0-9a-f]{6}$/i.test(value)) value = customAccent;
+  customGlow = value;
+  document.documentElement.style.setProperty("--custom-glow", value);
+  try { localStorage.setItem("nivli-custom-glow", value); } catch {}
+}
+applyCustomGlow(customGlow);
+let customSurface = "#ffffff";
+try { customSurface = localStorage.getItem("nivli-custom-surface") || customSurface; } catch {}
+function applyCustomSurface(value) {
+  if (!/^#[0-9a-f]{6}$/i.test(value)) value = "#ffffff";
+  customSurface = value;
+  document.documentElement.style.setProperty("--custom-surface", value);
+  if (document.documentElement.dataset.theme === "light") { const meta = document.querySelector('meta[name="theme-color"]'); if (meta) meta.content = value; }
+  try { localStorage.setItem("nivli-custom-surface", value); } catch {}
+}
+applyCustomSurface(customSurface);
+applyTheme(initialTheme);
+document.querySelectorAll("[data-theme-toggle]").forEach((button) => button.addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  try { localStorage.setItem("luma-theme", next); } catch {}
+  applyTheme(next);
+}));
+let enterToSend = true;
+try { enterToSend = localStorage.getItem("luma-enter-to-send") !== "false"; } catch {}
+let textSize = "normal";
+try { textSize = localStorage.getItem("luma-text-size") || "normal"; } catch {}
+let personalization = { useMemory: false, memory: "", aboutYou: "", responseInstructions: "", contextDepth: 16, responseStyle: "auto" };
+document.documentElement.dataset.textSize = textSize;
+
+async function api(url, options = {}) {
+  const response = await fetch(url, {
+    credentials: "same-origin",
+    ...options,
+    headers: { ...(options.body ? { "Content-Type": "application/json" } : {}), ...(options.headers || {}) }
+  });
+  let data = {};
+  try { data = await response.json(); } catch {}
+  if (!response.ok) {
+    const error = new Error(data.error || "Request failed.");
+    error.status = response.status;
+    error.data = data;
+    throw error;
+  }
+  return data;
+}
+function show(screen) {
+  authScreen.hidden = screen !== "auth";
+  onboardingScreen.hidden = screen !== "onboarding";
+  chatScreen.hidden = screen !== "chat";
+}
+function closeMobileSidebar() {
+  sidebar?.classList.remove("mobile-open");
+  if (sidebarBackdrop) sidebarBackdrop.hidden = true;
+  mobileMenuButton?.setAttribute("aria-expanded", "false");
+  mobileMenuButton?.setAttribute("aria-label", "Open navigation");
+}
+mobileMenuButton?.addEventListener("click", () => {
+  const open = !sidebar.classList.contains("mobile-open");
+  sidebar.classList.toggle("mobile-open", open);
+  sidebarBackdrop.hidden = !open;
+  mobileMenuButton.setAttribute("aria-expanded", String(open));
+  mobileMenuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+});
+sidebarBackdrop?.addEventListener("click", closeMobileSidebar);
+sidebar?.addEventListener("click", event => {
+  if (event.target.closest("[data-new-chat], [data-mode], .history-item, .history-action, .plans-nav-link")) closeMobileSidebar();
+});
+document.addEventListener("keydown", event => { if (event.key === "Escape") closeMobileSidebar(); });
+window.addEventListener("resize", () => { if (window.innerWidth > 720) closeMobileSidebar(); });
+function showOnboardingError(message) {
+  onboardError.textContent = message;
+  onboardError.hidden = !message;
+}
+function loadGoogleIdentity() {
+  if (window.google?.accounts?.id) return Promise.resolve();
+  if (gisPromise) return gisPromise;
+  gisPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://accounts.google.com/gsi/client";
+    script.async = true;
+    script.defer = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.append(script);
+  });
+  return gisPromise;
+}
+async function renderAuth() {
+  show("auth");
+  document.querySelector("#google-button").replaceChildren();
+  const disabled = document.querySelector("#google-disabled");
+  disabled.hidden = Boolean(config?.googleClientId);
+  disabled.disabled = true;
+  if (!config?.googleClientId) {
+    authNotice.textContent = "Google sign-in isn't configured yet. Add GOOGLE_CLIENT_ID to the existing private .env.txt file (or .env) to enable it.";
+    return;
+  }
+  authNotice.textContent = "";
+  try {
+    await loadGoogleIdentity();
+    window.google.accounts.id.initialize({ client_id: config.googleClientId, callback: handleGoogleCredential, auto_select: false });
+    window.google.accounts.id.renderButton(document.querySelector("#google-button"), { type: "standard", theme: document.documentElement.dataset.theme === "dark" ? "filled_black" : "outline", size: "large", shape: "pill", text: "continue_with", width: 280, logo_alignment: "left" });
+  } catch {
+    authNotice.textContent = "Google sign-in couldn't load. Check your connection and try again.";
+  }
+}
+async function handleGoogleCredential(result) {
+  authNotice.textContent = "Signing you in…";
+  try {
+    const data = await api("/api/auth/google", { method: "POST", body: JSON.stringify({ credential: result.credential }) });
+    account = data.account;
+    routeAccount();
+  } catch (error) {
+    authNotice.textContent = error.message;
+  }
+}
+async function refreshModelStatus() {
+  const badge = document.querySelector("#model-badge");
+  const label = document.querySelector("#model-label");
+  if (!badge || !label) return;
+  try {
+    const status = await api("/api/model-status");
+    label.textContent = availableModels.find(model => model.id === activeModelId)?.name || "Nivli AI";
+    badge.title = status.ready ? `Connected to ${status.model}` : status.model;
+    badge.classList.toggle("model-unavailable", !status.ready);
+  } catch {
+    label.textContent = availableModels.find(model => model.id === activeModelId)?.name || "Nivli AI";
+    badge.title = "Could not check the connection";
+    badge.classList.add("model-unavailable");
+  }
+}
+function updateModelPicker() {
+  const current = availableModels.find(model => model.id === activeModelId) || availableModels[0];
+  const name = document.querySelector("#selected-model-name");
+  const headerName = document.querySelector("#model-label");
+  const options = document.querySelector("#model-options");
+  if (!current || !name || !options) return;
+  activeModelId = current.id;
+  name.textContent = current.name;
+  if (headerName) headerName.textContent = current.name;
+  options.replaceChildren();
+  for (const model of availableModels) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `model-option${model.id === activeModelId ? " selected" : ""}`;
+    button.setAttribute("aria-pressed", String(model.id === activeModelId));
+    const check = document.createElement("span");
+    check.className = "model-option-check";
+    check.textContent = model.id === activeModelId ? "✓" : "";
+    const copy = document.createElement("span");
+    const title = document.createElement("strong");
+    title.textContent = model.name;
+    const description = document.createElement("small");
+    description.textContent = model.description;
+    copy.append(title, description);
+    button.append(check, copy);
+    button.addEventListener("click", () => {
+      activeModelId = model.id;
+      try { localStorage.setItem("luma-model-id", activeModelId); } catch {}
+      updateModelPicker();
+      document.querySelector("#model-menu").hidden = true;
+      document.querySelector("#model-picker-button").setAttribute("aria-expanded", "false");
+      refreshModelStatus();
+    });
+    options.append(button);
+  }
+}
+async function loadModelChoices() {
+  try {
+    const result = await api("/api/models");
+    availableModels = Array.isArray(result.models) ? result.models : [];
+    if (!availableModels.some(model => model.id === activeModelId)) activeModelId = "nollent-4";
+    updateModelPicker();
+  } catch { availableModels = []; }
+}
+function routeAccount() {
+  if (!account) return renderAuth();
+  if (account.complete) enterChat();
+  else renderOnboarding();
+}
+function enterChat() {
+  renderAccount();
+  loadModelChoices();
+  refreshModelStatus();
+  show("chat");
+  setMode("chat");
+  resetChat();
+  loadConversationList();
+  loadPreferences();
+}
+function renderAccount() {
+  const label = account.username || account.name || "Nivli";
+  document.querySelector("#profile-name").textContent = label;
+  document.querySelector("#menu-username").textContent = `@${account.username || ""}`;
+  document.querySelector("#profile-email").textContent = account.email || "";
+  document.querySelector("#menu-email").textContent = account.email || "";
+  const image = document.querySelector("#profile-picture");
+  if (account.picture) {
+    image.src = account.picture;
+    image.hidden = false;
+    document.querySelector("#profile-avatar").hidden = true;
+  } else {
+    image.hidden = true;
+    document.querySelector("#profile-avatar").hidden = false;
+  }
+}
+function saveOnboarding(values) {
+  return api("/api/onboarding", { method: "PATCH", body: JSON.stringify(values) }).then((result) => {
+    account = result.account;
+    return result.account;
+  });
+}
+function renderOnboarding() {
+  show("onboarding");
+  showOnboardingError("");
+  const step = Number(account.step) || 0;
+  onboardingContent.replaceChildren();
+  if (step === 0) {
+    onboardingContent.innerHTML = '<div class="welcome-step"><p class="eyebrow">WELCOME TO NIVLI</p><h1>Make this space<br><em>feel like yours.</em></h1><p>We’ll ask a few short questions so Nivli can shape its answers around the way you like to work. You can skip any question.</p><button class="primary-button" id="begin-setup">Let’s get started <span>→</span></button></div>';
+    document.querySelector("#begin-setup").addEventListener("click", async () => {
+      try { await saveOnboarding({ step: 1 }); renderOnboarding(); } catch (error) { showOnboardingError(error.message); }
+    });
+    return;
+  }
+  if (step >= 1 && step <= 4) return renderQuestion(step);
+  if (step === 5) return renderUsername();
+  if (step >= 6) {
+    onboardingContent.innerHTML = '<div class="welcome-step finish-step"><div class="finish-check">✓</div><p class="eyebrow">ALL SET</p><h1>You’re all set!<br><em>Welcome to Nivli.</em></h1><p>Your space is ready when you are.</p><button class="primary-button" id="enter-nivli">Enter Nivli <span>→</span></button></div>';
+    document.querySelector("#enter-nivli").addEventListener("click", enterChat);
+  }
+}
+function renderQuestion(step) {
+  const index = step - 1;
+  const question = questions[index];
+  const selected = account.answers?.[index] || "";
+  const wrap = document.createElement("div");
+  wrap.className = "question-step";
+  const progress = document.createElement("div");
+  progress.className = "progress-header";
+  progress.innerHTML = `<span>GETTING TO KNOW YOU</span><span>${index + 1} <i>/ 4</i></span>`;
+  const track = document.createElement("div");
+  track.className = "progress-track";
+  const fill = document.createElement("span");
+  fill.style.width = `${(index + 1) * 25}%`;
+  track.append(fill);
+  const title = document.createElement("h2");
+  title.textContent = question.title;
+  const hint = document.createElement("p");
+  hint.className = "question-hint";
+  hint.textContent = "Choose what feels right, or skip this one.";
+  const options = document.createElement("div");
+  options.className = "answer-options";
+  question.options.forEach((option, optionIndex) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `answer-option${option === selected ? " selected" : ""}`;
+    button.setAttribute("aria-pressed", String(option === selected));
+    const marker = document.createElement("span");
+    marker.className = "option-marker";
+    marker.textContent = String.fromCharCode(65 + optionIndex);
+    const label = document.createElement("span");
+    label.textContent = option;
+    button.append(marker, label);
+    button.addEventListener("click", () => {
+      account.answers = { ...account.answers, [index]: option };
+      options.querySelectorAll(".answer-option").forEach((item) => {
+        item.classList.remove("selected");
+        item.setAttribute("aria-pressed", "false");
+      });
+      button.classList.add("selected");
+      button.setAttribute("aria-pressed", "true");
+    });
+    options.append(button);
+  });
+  const actions = document.createElement("div");
+  actions.className = "step-actions";
+  const back = document.createElement("button");
+  back.className = "back-button";
+  back.type = "button";
+  back.textContent = "← Back";
+  back.addEventListener("click", async () => {
+    try { await saveOnboarding({ step: step - 1 }); renderOnboarding(); } catch (error) { showOnboardingError(error.message); }
+  });
+  const next = document.createElement("button");
+  next.className = "primary-button";
+  next.type = "button";
+  next.innerHTML = 'Continue <span>→</span>';
+  next.addEventListener("click", async () => {
+    try {
+      await saveOnboarding({ step: step + 1, answers: { [index]: account.answers?.[index] || "" } });
+      renderOnboarding();
+    } catch (error) { showOnboardingError(error.message); }
+  });
+  actions.append(back, next);
+  wrap.append(progress, track, title, hint, options, actions);
+  onboardingContent.append(wrap);
+}
+function renderUsername() {
+  const wrap = document.createElement("div");
+  wrap.className = "username-step";
+  wrap.innerHTML = '<div class="progress-header"><span>ONE LAST THING</span><span>4 <i>/ 4</i></span></div><div class="progress-track"><span style="width:100%"></span></div><h2>Choose your Nivli username.</h2><p class="question-hint">This helps make your space yours. Use 3–20 letters, numbers, or underscores.</p><label class="username-field"><span>@</span><input id="username-input" type="text" minlength="3" maxlength="20" autocomplete="nickname" spellcheck="false" placeholder="yourname"></label><p class="availability" id="availability" aria-live="polite"></p><div class="step-actions"><button class="back-button" id="username-back" type="button">← Back</button><button class="primary-button" id="finish-setup" type="button" disabled>Finish setup <span>→</span></button></div>';
+  onboardingContent.append(wrap);
+  const field = wrap.querySelector("#username-input");
+  const availability = wrap.querySelector("#availability");
+  const finish = wrap.querySelector("#finish-setup");
+  field.value = account.username || "";
+  let timer;
+  let available = false;
+  let checked = "";
+  function check() {
+    const value = field.value.trim();
+    available = false;
+    checked = "";
+    finish.disabled = true;
+    if (!/^[A-Za-z0-9_]{3,20}$/.test(value)) {
+      availability.textContent = value ? "Use 3–20 letters, numbers, or underscores." : "";
+      availability.className = "availability";
+      return;
+    }
+    availability.textContent = "Checking availability…";
+    availability.className = "availability checking";
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      try {
+        const data = await api(`/api/onboarding/username-available?username=${encodeURIComponent(value)}`);
+        if (field.value.trim() !== value) return;
+        available = data.available;
+        checked = value;
+        availability.textContent = available ? "That username is available." : "That username is already taken.";
+        availability.className = `availability ${available ? "available" : "taken"}`;
+        finish.disabled = !available;
+      } catch {
+        availability.textContent = "Could not check right now. Try again.";
+        availability.className = "availability taken";
+      }
+    }, 260);
+  }
+  field.addEventListener("input", check);
+  check();
+  wrap.querySelector("#username-back").addEventListener("click", async () => {
+    try { await saveOnboarding({ step: 4 }); renderOnboarding(); } catch (error) { showOnboardingError(error.message); }
+  });
+  finish.addEventListener("click", async () => {
+    if (!available || checked !== field.value.trim()) return;
+    finish.disabled = true;
+    try {
+      account = await saveOnboarding({ step: 5, username: checked });
+      account = (await api("/api/onboarding/complete", { method: "POST", body: "{}" })).account;
+      renderOnboarding();
+    } catch (error) {
+      showOnboardingError(error.message);
+      finish.disabled = false;
+      check();
+    }
+  });
+}
+function timeGreeting() {
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 11) return "Early bird";
+  if (hour >= 11 && hour < 17) return "Afternoon pause";
+  if (hour >= 17 && hour < 22) return "Evening thoughts";
+  return "Night owl hours";
+}
+function updateTimeGreeting() {
+  const label = timeGreeting();
+  document.querySelector("#welcome-eyebrow").textContent = label.toUpperCase();
+  const heading = document.querySelector("#welcome-heading");
+  const accent = document.createElement("em");
+  accent.textContent = account?.username || "you";
+  heading.replaceChildren(document.createTextNode(`${label},`), document.createElement("br"), accent);
+  document.querySelector("#welcome-copy").textContent = mode === "chat"
+    ? "A little room for questions, ideas, and whatever is on your mind."
+    : "Tell me what you’re building, learning, or fixing today.";
+}
+function renderConversationList() {
+  const list = document.querySelector("#history-list");
+  list.replaceChildren();
+  const filtered = conversationList.filter(conversation => `${conversation.title || ""} ${conversation.preview || ""}`.toLocaleLowerCase().includes(conversationSearch));
+  if (!conversationList.length || !filtered.length) {
+    const empty = document.createElement("p");
+    empty.className = "history-empty";
+    empty.textContent = conversationSearch ? "No chats match that search." : "Your conversations will appear here.";
+    list.append(empty);
+    return;
+  }
+  for (const conversation of filtered) {
+    const row = document.createElement("div");
+    row.className = "history-row";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "history-item";
+    button.classList.toggle("active", conversation.id === conversationId);
+    button.setAttribute("aria-current", conversation.id === conversationId ? "page" : "false");
+    const icon = document.createElement("span");
+    icon.className = "history-item-icon";
+    icon.textContent = conversation.mode === "script" ? "⌘" : "◦";
+    const text = document.createElement("span");
+    text.className = "history-item-text";
+    const title = document.createElement("strong");
+    title.textContent = conversation.title || "New conversation";
+    const date = document.createElement("small");
+    date.textContent = new Date(conversation.updatedAt).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+    text.append(title, date);
+    button.append(icon, text);
+    button.addEventListener("click", () => openConversation(conversation.id));
+    const rename = document.createElement("button");
+    rename.type = "button";
+    rename.className = "history-action history-rename";
+    rename.title = "Rename conversation";
+    rename.setAttribute("aria-label", `Rename ${conversation.title || "conversation"}`);
+    rename.textContent = "✎";
+    rename.addEventListener("click", async () => {
+      const value = window.prompt("Rename conversation", conversation.title || "New conversation");
+      if (value === null || !value.trim() || value.trim() === conversation.title) return;
+      try {
+        await api(`/api/conversations/${encodeURIComponent(conversation.id)}`, { method: "PATCH", body: JSON.stringify({ title: value.trim() }) });
+        await loadConversationList();
+      } catch (error) { window.alert(error.message || "That conversation couldn’t be renamed. Please try again."); }
+    });
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.className = "history-action history-delete";
+    remove.title = "Delete conversation";
+    remove.setAttribute("aria-label", `Delete ${conversation.title || "conversation"}`);
+    remove.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3m3 0-1 13H7L6 7m4 4v5m4-5v5"/></svg>';
+    remove.addEventListener("click", async () => {
+      if (!window.confirm(`Delete “${conversation.title || "New conversation"}”? This cannot be undone.`)) return;
+      remove.disabled = true;
+      try {
+        await api(`/api/conversations/${encodeURIComponent(conversation.id)}`, { method: "DELETE" });
+        if (conversationId === conversation.id) resetChat();
+        await loadConversationList();
+      } catch (error) {
+        window.alert(error.message || "That conversation could not be deleted. Please try again.");
+        remove.disabled = false;
+      }
+    });
+    row.append(button, rename, remove);
+    list.append(row);
+  }
+}
+async function loadConversationList() {
+  try {
+    const result = await api("/api/conversations");
+    conversationList = result.conversations || [];
+    renderConversationList();
+  } catch {
+    const list = document.querySelector("#history-list");
+    list.replaceChildren();
+    const error = document.createElement("p");
+    error.className = "history-empty";
+    error.textContent = "Chat history couldn’t be loaded.";
+    list.append(error);
+  }
+}
+async function openConversation(id) {
+  try {
+    const result = await api(`/api/conversations/${encodeURIComponent(id)}`);
+    const conversation = result.conversation;
+    if (conversation.modelId && availableModels.some(model => model.id === conversation.modelId)) {
+      activeModelId = conversation.modelId;
+      try { localStorage.setItem("luma-model-id", activeModelId); } catch {}
+      updateModelPicker();
+      refreshModelStatus();
+    }
+    selectedImages = [];
+    renderSelectedImages();
+    setMode(conversation.mode);
+    conversationId = conversation.id;
+    conversationMessages = conversation.messages.map(item => ({ ...item }));
+    conversationMemory = conversation.memory || "";
+    messages.replaceChildren();
+    errorBanner.hidden = true;
+    chatWelcome.hidden = conversation.messages.length > 0;
+    const latestMessage = conversation.messages.at(-1);
+    conversation.messages.forEach((item) => item.role === "user"
+      ? addUserMessage(item.text, item.images || [], item.turnId, item.createdAt || 0)
+      : addAssistantMessage(item.text, item.sources || [], item.turnId, { incomplete: item.incomplete === true, canRegenerate: item === latestMessage }));
+    const last = conversation.messages.at(-1);
+    const hasReply = last && conversation.messages.some((item) => item.role === "model" && item.turnId === last.turnId);
+    if (last?.role === "user" && !hasReply) {
+      history = conversation.messages.slice(0, -1).map(({ role, text, images }) => ({ role, text, ...(images ? { images } : {}) }));
+      pending = { message: last.text, images: last.images || [], mode: conversation.mode, modelId: conversation.modelId || activeModelId, conversationId: conversation.id, turnId: last.turnId };
+      errorText.textContent = AI_ERROR;
+      errorBanner.hidden = false;
+    } else {
+      history = conversation.messages.map(({ role, text, images }) => ({ role, text, ...(images ? { images } : {}) }));
+      pending = null;
+    }
+    renderConversationList();
+  } catch {
+    const list = document.querySelector("#history-list");
+    const error = document.createElement("p");
+    error.className = "history-empty";
+    error.textContent = "That conversation couldn’t be opened. Please try again.";
+    list.prepend(error);
+  }
+}
+function setMode(nextMode) {
+  if (activeGeneration) activeGeneration.abort();
+  activeGeneration = null;
+  generationCounter++;
+  busy = false;
+  input.disabled = false;
+  mode = nextMode;
+  conversationId = null;
+  conversationMessages = [];
+  history = [];
+  pending = null;
+  messages.replaceChildren();
+  errorBanner.hidden = true;
+  if (errorDetail) errorDetail.hidden = true;
+  document.querySelectorAll("[data-mode]").forEach((button) => button.classList.toggle("active", button.dataset.mode === mode));
+  document.querySelector("#mode-label").textContent = mode === "chat" ? "Chat Mode" : "Script Mode";
+  const modeDescriptionText = document.querySelector("#mode-description");
+  if (modeDescriptionText) modeDescriptionText.textContent = mode === "chat" ? "Everyday questions, ideas, and writing." : "Create, explain, and debug scripts.";
+  const modeAction = document.querySelector("#switch-mode-button strong");
+  const modeDescription = document.querySelector("#switch-mode-button small");
+  if (modeAction) modeAction.textContent = mode === "chat" ? "Switch to Script Mode" : "Switch to Chat Mode";
+  if (modeDescription) modeDescription.textContent = mode === "chat" ? "Get help with code and scripts" : "Return to everyday questions and ideas";
+  updateTimeGreeting();
+  document.querySelector("#suggestions").hidden = mode === "script";
+  chatWelcome.hidden = false;
+  input.placeholder = mode === "chat" ? "Ask me anything…" : "Describe the script you need…";
+  renderConversationList();
+  refreshInput();
+}
+function renderAssistantReply(target, text) {
+  const parts = text.split(/```([^\n`]*)\n([\s\S]*?)```/g);
+  for (let i = 0; i < parts.length; i += 3) {
+    const prose = parts[i];
+    if (prose) {
+      const paragraph = document.createElement("p");
+      paragraph.className = "reply-prose";
+      prose.split("\n").forEach((line, index) => {
+        if (index) paragraph.append(document.createElement("br"));
+        paragraph.append(document.createTextNode(line));
+      });
+      target.append(paragraph);
+    }
+    if (i + 2 < parts.length) {
+      const language = parts[i + 1].trim();
+      const codeText = parts[i + 2].replace(/\n$/, "");
+      const box = document.createElement("div");
+      box.className = "code-block";
+      const head = document.createElement("div");
+      head.className = "code-head";
+      const lang = document.createElement("span");
+      lang.textContent = language || "code";
+      const copy = document.createElement("button");
+      copy.type = "button";
+      copy.className = "copy-code";
+      copy.textContent = "Copy code";
+      copy.addEventListener("click", async () => {
+        try { await navigator.clipboard.writeText(codeText); copy.textContent = "Copied"; setTimeout(() => copy.textContent = "Copy code", 1300); }
+        catch { copy.textContent = "Copy unavailable"; setTimeout(() => copy.textContent = "Copy code", 1500); }
+      });
+      head.append(lang, copy);
+      const pre = document.createElement("pre");
+      const code = document.createElement("code");
+      code.textContent = codeText;
+      pre.append(code);
+      box.append(head, pre);
+      target.append(box);
+    }
+  }
+}
+function addUserMessage(text, images = [], turnId = null, createdAt = Date.now()) {
+  const row = document.createElement("div");
+  row.className = "message user";
+  if (turnId) row.dataset.turnId = turnId;
+  const bubble = document.createElement("div");
+  bubble.className = "message-content";
+  bubble.textContent = text;
+  if (images.length) {
+    const gallery = document.createElement("div");
+    gallery.className = "message-images";
+    for (const image of images) {
+      const preview = document.createElement("img");
+      preview.src = image.data;
+      preview.alt = image.name || "Attached image";
+      preview.loading = "lazy";
+      gallery.append(preview);
+    }
+    bubble.append(gallery);
+  }
+  row.append(bubble);
+  const actions = document.createElement("div"); actions.className = "user-message-actions";
+  const time = document.createElement("time"); time.className = "message-time";
+  const timeValue = Number(createdAt);
+  if (Number.isFinite(timeValue) && timeValue > 0) { time.dateTime = new Date(timeValue).toISOString(); time.textContent = new Intl.DateTimeFormat([], { hour: "numeric", minute: "2-digit" }).format(timeValue); }
+  const iconButton = (label, icon) => { const button = document.createElement("button"); button.type = "button"; button.className = "message-action-button"; button.setAttribute("aria-label", label); button.title = label; button.innerHTML = icon; return button; };
+  const copy = iconButton("Copy message", '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>');
+  copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(text); copy.title = "Copied"; copy.setAttribute("aria-label", "Copied"); setTimeout(() => { copy.title = "Copy message"; copy.setAttribute("aria-label", "Copy message"); }, 1200); } catch {} });
+  const edit = iconButton("Edit and resend message", '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5 5 5M4 20l4.5-1 10.8-10.8a2.1 2.1 0 0 0-3-3L5.5 16 4 20Z"/></svg>');
+  edit.addEventListener("click", () => { input.value = text; input.focus(); input.setSelectionRange(input.value.length, input.value.length); refreshInput(); });
+  actions.append(time, copy, edit); row.append(actions);
+  messages.append(row);
+  row.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function appendAssistantExtras(row, content, text, sources, turnId, { incomplete = false, canRegenerate = true } = {}) {
+  const validSources = (Array.isArray(sources) ? sources : []).filter(source => { try { const url = new URL(source.url); return ["http:", "https:"].includes(url.protocol); } catch { return false; } }).slice(0, 5);
+  if (validSources.length) {
+    const list = document.createElement("details"); list.className = "source-list"; list.open = true;
+    const heading = document.createElement("summary"); heading.textContent = "Searched the web · " + validSources.length + (validSources.length === 1 ? " source" : " sources");
+    const chips = document.createElement("div"); chips.className = "source-chips"; list.append(heading, chips);
+    validSources.forEach((source, index) => { const link = document.createElement("a"); link.href = source.url; link.target = "_blank"; link.rel = "noopener noreferrer"; link.textContent = source.title; chips.append(link); });
+    content.append(list);
+  }
+  if (incomplete) {
+    const stopped = document.createElement("small"); stopped.className = "reply-stopped"; stopped.textContent = "Stopped early"; content.append(stopped);
+  }
+  const actions = document.createElement("div"); actions.className = "assistant-actions";
+  const iconButton = (label, icon) => { const button = document.createElement("button"); button.type = "button"; button.className = "message-action-button"; button.setAttribute("aria-label", label); button.title = label; button.innerHTML = icon; return button; };
+  const copy = iconButton("Copy response", '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>');
+  copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(text); copy.title = "Copied"; copy.setAttribute("aria-label", "Copied"); setTimeout(() => { copy.title = "Copy response"; copy.setAttribute("aria-label", "Copy response"); }, 1200); } catch {} });
+  const feedback = (kind, label, icon) => { const button = iconButton(label, icon); button.addEventListener("click", () => { actions.querySelectorAll("[data-feedback]").forEach(other => { other.classList.remove("selected"); other.removeAttribute("aria-pressed"); }); if (button.dataset.feedback !== kind || !button.classList.contains("selected")) { button.classList.add("selected"); button.setAttribute("aria-pressed", "true"); button.dataset.feedback = kind; } }); button.dataset.feedback = kind; return button; };
+  const like = feedback("like", "Helpful response", '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v11H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3Zm0 0 5-8c2 0 3 1 3 3l-1 5h5a2 2 0 0 1 2 2l-2 7a2 2 0 0 1-2 2H7"/></svg>');
+  const dislike = feedback("dislike", "Unhelpful response", '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14V3H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3Zm0 0 5 8c2 0 3-1 3-3l-1-5h5a2 2 0 0 0 2-2l-2-7a2 2 0 0 0-2-2H7"/></svg>');
+  const speak = iconButton("Read response aloud", '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 4a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"/></svg>');
+  speak.addEventListener("click", () => { if (!("speechSynthesis" in window)) { speak.title = "Speech is not supported in this browser"; return; } if (window.speechSynthesis.speaking) { window.speechSynthesis.cancel(); speak.title = "Read response aloud"; speak.setAttribute("aria-label", "Read response aloud"); return; } const utterance = new SpeechSynthesisUtterance(text); utterance.onend = () => { speak.title = "Read response aloud"; speak.setAttribute("aria-label", "Read response aloud"); }; window.speechSynthesis.speak(utterance); speak.title = "Stop reading"; speak.setAttribute("aria-label", "Stop reading"); });
+  actions.append(copy, like, dislike, speak);
+  const more = document.createElement("div"); more.className = "message-more-wrap";
+  const moreButton = iconButton("More response actions", '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>'); moreButton.setAttribute("aria-expanded", "false");
+  const menu = document.createElement("div"); menu.className = "message-more-menu"; menu.hidden = true;
+  more.hidden = !canRegenerate || !turnId;
+  moreButton.addEventListener("click", () => { menu.hidden = !menu.hidden; moreButton.setAttribute("aria-expanded", String(!menu.hidden)); });
+  more.append(moreButton, menu); actions.append(more);
+  if (canRegenerate && turnId) {
+    const regenerate = document.createElement("button"); regenerate.type = "button"; regenerate.textContent = "Regenerate response"; regenerate.setAttribute("aria-label", "Regenerate assistant reply");
+    regenerate.addEventListener("click", () => regenerateAssistantReply(turnId));
+    regenerate.addEventListener("click", () => { menu.hidden = true; moreButton.setAttribute("aria-expanded", "false"); });
+    menu.append(regenerate);
+  }
+  row.append(actions);
+}
+function addAssistantMessage(text, sources = [], turnId = null, options = {}) {
+  const row = document.createElement("div");
+  row.className = "message assistant";
+  if (turnId) row.dataset.turnId = turnId;
+  const content = document.createElement("div");
+  content.className = "message-content assistant-content";
+  renderAssistantReply(content, text);
+  row.append(content);
+  appendAssistantExtras(row, content, text, sources, turnId, options);
+  messages.append(row);
+  row.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  return row;
+}
+function addStreamingAssistant(turnId) {
+  const row = document.createElement("div"); row.className = "message assistant streaming-message"; row.dataset.turnId = turnId;
+  const content = document.createElement("div"); content.className = "message-content assistant-content streaming-content";
+  const cursor = document.createElement("span"); cursor.className = "stream-cursor"; cursor.setAttribute("aria-hidden", "true");
+  content.append(cursor); row.append(content); messages.append(row); row.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  return { row, content, cursor };
+}
+function finishStreamingAssistant(streaming, text, sources, turnId, options = {}) {
+  if (!streaming) return addAssistantMessage(text, sources, turnId, options);
+  streaming.cursor.remove(); streaming.content.replaceChildren(); renderAssistantReply(streaming.content, text);
+  appendAssistantExtras(streaming.row, streaming.content, text, sources, turnId, options);
+  streaming.row.classList.remove("streaming-message");
+  return streaming.row;
+}
+function addTyping() {
+  const row = document.createElement("div");
+  row.className = "message assistant";
+  row.innerHTML = '<div class="message-content"><div class="typing" aria-label="Nivli is thinking"><span></span><span></span><span></span></div><span class="thinking-label"></span></div>';
+  row.querySelector(".thinking-label").textContent = mode === "script" ? "Nivli is reviewing your request…" : (webSearchEnabled ? "Searching the web…" : "Nivli is thinking…");
+  messages.append(row);
+  row.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  return row;
+}
+async function consumeChatStream(payload, signal, onEvent) {
+  const response = await fetch("/api/chat", { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal });
+  if (!response.ok) {
+    let data = {};
+    try { data = await response.json(); } catch {}
+    const error = new Error(data.error || "Request failed."); error.status = response.status; error.data = data; throw error;
+  }
+  if (!response.body) throw new Error("This browser could not open a streaming response.");
+  const reader = response.body.getReader(), decoder = new TextDecoder();
+  let buffer = "";
+  const consumeBlock = block => {
+    const data = block.split(/\r?\n/).filter(line => line.startsWith("data:")).map(line => line.slice(5).trimStart()).join("\n");
+    if (data) onEvent(JSON.parse(data));
+  };
+  while (true) {
+    const { value, done } = await reader.read();
+    buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+    const blocks = buffer.split(/\r?\n\r?\n/); buffer = blocks.pop() || "";
+    for (const block of blocks) consumeBlock(block);
+    if (done) break;
+  }
+  if (buffer.trim()) consumeBlock(buffer);
+}
+function regenerateAssistantReply(turnId) {
+  const userMessage = [...conversationMessages].reverse().find(item => item.role === "user" && item.turnId === turnId);
+  if (!userMessage || !conversationId || busy) return;
+  const request = { message: userMessage.text, images: userMessage.images || [], mode, modelId: activeModelId, conversationId, turnId, webSearch: webSearchEnabled, chatMemory: conversationMemory, regenerate: true };
+  pending = request;
+  const existing = [...messages.querySelectorAll(".message.assistant[data-turn-id]")].find(row => row.dataset.turnId === turnId);
+  existing?.remove();
+  conversationMessages = conversationMessages.filter(item => !(item.role === "model" && item.turnId === turnId));
+  errorBanner.hidden = true;
+  sendMessage(request.message, true, true);
+}
+async function sendMessage(value, retry = false, regenerate = false) {
+  const images = retry ? (pending?.images || []) : selectedImages;
+  const message = value.trim() || (images.length ? "Please analyze the attached image(s)." : "");
+  if (!message || busy) return;
+  chatWelcome.hidden = true;
+  errorBanner.hidden = true;
+  if (errorDetail) errorDetail.hidden = true;
+  const sentMode = retry ? pending.mode : mode;
+  const turnId = retry ? pending.turnId : crypto.randomUUID();
+  const selectedConversationId = retry ? pending.conversationId : conversationId;
+  const selectedModelId = retry ? (pending.modelId || activeModelId) : activeModelId;
+  const sentWebSearch = retry ? Boolean(pending.webSearch) : webSearchEnabled;
+  const sentChatMemory = retry ? (pending.chatMemory || "") : conversationMemory;
+  const requestState = retry ? { ...pending, regenerate } : { message, images, mode: sentMode, modelId: selectedModelId, conversationId: selectedConversationId, turnId, webSearch: sentWebSearch, chatMemory: sentChatMemory, regenerate: false };
+  pending = requestState;
+  if (!retry) {
+    addUserMessage(message, images, turnId);
+    conversationMessages.push({ role: "user", text: message, turnId, createdAt: Date.now(), ...(images.length ? { images } : {}) });
+  } else if (regenerate) {
+    const oldReply = [...messages.querySelectorAll(".message.assistant[data-turn-id]")].find(row => row.dataset.turnId === turnId);
+    oldReply?.remove();
+    conversationMessages = conversationMessages.filter(item => !(item.role === "model" && item.turnId === turnId));
+  }
+  busy = true;
+  input.value = "";
+  if (!retry) { selectedImages = []; renderSelectedImages(); }
+  input.disabled = true;
+  refreshInput();
+  const typing = addTyping();
+  const controller = new AbortController();
+  const requestNumber = ++generationCounter;
+  activeGeneration = controller;
+  let streaming = null;
+  let reply = "";
+  let sources = [];
+  try {
+    await consumeChatStream({ message, mode: sentMode, conversationId: requestState.conversationId, turnId, images, model: selectedModelId, webSearch: sentWebSearch, chatMemory: sentChatMemory, regenerate: requestState.regenerate }, controller.signal, event => {
+      if (event.type === "meta") { conversationId = event.conversationId; requestState.conversationId = event.conversationId; }
+      else if (event.type === "delta") {
+        typing.remove();
+        if (!streaming) streaming = addStreamingAssistant(turnId);
+        reply += event.content;
+        streaming.content.insertBefore(document.createTextNode(event.content), streaming.cursor);
+        streaming.row.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      } else if (event.type === "done") { sources = event.sources || []; }
+      else if (event.type === "error") { const error = new Error(event.error || AI_ERROR); error.data = event; throw error; }
+    });
+    if (requestNumber !== generationCounter) return;
+    typing.remove();
+    if (!reply.trim()) throw new Error("Nivli finished without a reply. Please try again.");
+    finishStreamingAssistant(streaming, reply, sources, turnId, { canRegenerate: true });
+    conversationMessages.push({ role: "model", text: reply, turnId, ...(sources.length ? { sources } : {}) });
+    history.push({ role: "user", text: message, ...(images.length ? { images } : {}) }, { role: "model", text: reply });
+    pending = null;
+    await loadConversationList();
+  } catch (error) {
+    if (requestNumber !== generationCounter) return;
+    typing.remove();
+    if (controller.signal.aborted) {
+      if (reply.trim()) {
+        finishStreamingAssistant(streaming, reply, sources, turnId, { incomplete: true, canRegenerate: true });
+        conversationMessages.push({ role: "model", text: reply, turnId, incomplete: true, ...(sources.length ? { sources } : {}) });
+        pending = null;
+      } else {
+        pending = { ...requestState, regenerate: requestState.regenerate || regenerate };
+        errorText.textContent = "Stopped before the reply began. You can retry when you’re ready.";
+        if (errorDetail) errorDetail.hidden = true;
+        errorBanner.hidden = false;
+      }
+      loadConversationList();
+    } else if (error.status === 401 || error.status === 403) {
+      pending = null;
+      try {
+        const me = await api("/api/me");
+        account = me.account;
+        if (account && !account.complete) renderOnboarding();
+        else if (!account) renderAuth();
+      } catch { renderAuth(); }
+    } else if (error.status === 400) {
+      pending = null;
+      errorText.textContent = error.message;
+      if (errorDetail) errorDetail.hidden = true;
+      errorBanner.hidden = false;
+    } else {
+      conversationId = error.data?.conversationId || selectedConversationId;
+      requestState.conversationId = conversationId;
+      requestState.regenerate = requestState.regenerate || Boolean(reply.trim());
+      pending = requestState;
+      if (reply.trim()) {
+        finishStreamingAssistant(streaming, reply, sources, turnId, { incomplete: true, canRegenerate: true });
+        conversationMessages.push({ role: "model", text: reply, turnId, incomplete: true, ...(sources.length ? { sources } : {}) });
+      }
+      errorText.textContent = ["MODEL_SETUP_REQUIRED", "WEB_SEARCH_UNAVAILABLE"].includes(error.data?.code) ? error.message : AI_ERROR;
+      if (errorDetail) {
+        errorDetail.textContent = error.data?.detail || "";
+        errorDetail.hidden = !error.data?.detail;
+      }
+      errorBanner.hidden = false;
+      await loadConversationList();
+    }
+  } finally {
+    if (requestNumber === generationCounter) {
+      busy = false;
+      activeGeneration = null;
+      input.disabled = false;
+      refreshInput();
+      input.focus();
+    }
+  }
+}
+function refreshInput() {
+  input.style.height = "auto";
+  input.style.height = `${Math.min(input.scrollHeight, 140)}px`;
+  sendButton.querySelector(".send-icon").hidden = busy;
+  sendButton.querySelector(".stop-icon").hidden = !busy;
+  sendButton.disabled = busy ? false : (!input.value.trim() && !selectedImages.length);
+  sendButton.setAttribute("aria-label", busy ? "Stop generating" : "Send message");
+  sendButton.title = busy ? "Stop generating" : "Send message";
+  charCount.textContent = input.value.length ? `${input.value.length}/4000` : "";
+}
+function resetChat() {
+  if (activeGeneration) activeGeneration.abort();
+  activeGeneration = null;
+  generationCounter++;
+  busy = false;
+  input.disabled = false;
+  conversationId = null;
+  conversationMessages = [];
+  conversationMemory = "";
+  webSearchEnabled = false;
+  updateWebSearchButton();
+  history = [];
+  pending = null;
+  messages.replaceChildren();
+  selectedImages = [];
+  renderSelectedImages();
+  errorBanner.hidden = true;
+  chatWelcome.hidden = false;
+  updateTimeGreeting();
+  document.querySelector("#profile-menu").hidden = true;
+  renderConversationList();
+  refreshInput();
+}
+document.querySelectorAll("[data-mode]").forEach((button) => button.addEventListener("click", () => { setMode(button.dataset.mode); resetChat(); }));
+document.querySelectorAll("[data-new-chat]").forEach((button) => button.addEventListener("click", (event) => { event.preventDefault(); resetChat(); }));
+document.querySelectorAll("[data-prompt]").forEach((button) => button.addEventListener("click", () => sendMessage(button.dataset.prompt)));
+document.querySelector("#history-refresh").addEventListener("click", loadConversationList);
+document.querySelector("#history-search").addEventListener("input", event => { conversationSearch = event.target.value.trim().toLocaleLowerCase(); renderConversationList(); });
+input.addEventListener("input", refreshInput);
+voiceButton.addEventListener("click", toggleVoiceInput);
+input.addEventListener("keydown", (event) => { if (enterToSend && event.key === "Enter" && !event.shiftKey) { event.preventDefault(); form.requestSubmit(); } });
+form.addEventListener("submit", (event) => { event.preventDefault(); if (activeRecognition) activeRecognition.stop(); if (busy) activeGeneration?.abort(); else sendMessage(input.value); });
+retryButton.addEventListener("click", () => { if (pending) sendMessage(pending.message, true, Boolean(pending.regenerate)); });
+
+function renderSelectedImages() {
+  attachmentStrip.replaceChildren();
+  attachmentStrip.hidden = selectedImages.length === 0;
+  for (const [index, image] of selectedImages.entries()) {
+    const item = document.createElement("div");
+    item.className = "attachment-preview";
+    const preview = document.createElement("img");
+    preview.src = image.data;
+    preview.alt = "";
+    const name = document.createElement("span");
+    name.textContent = image.name;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.setAttribute("aria-label", `Remove ${image.name}`);
+    remove.textContent = "×";
+    remove.addEventListener("click", () => { selectedImages.splice(index, 1); renderSelectedImages(); refreshInput(); });
+    item.append(preview, name, remove);
+    attachmentStrip.append(item);
+  }
+}
+
+function showError(message) {
+  errorText.textContent = message;
+  errorBanner.hidden = false;
+}
+
+document.querySelector("#tools-button").addEventListener("click", (event) => {
+  event.stopPropagation();
+  const menu = document.querySelector("#tools-menu");
+  menu.hidden = !menu.hidden;
+  document.querySelector("#tools-button").setAttribute("aria-expanded", String(!menu.hidden));
+  document.querySelector("#model-menu").hidden = true;
+  document.querySelector("#model-picker-button").setAttribute("aria-expanded", "false");
+});
+document.querySelector("#attach-images-button").addEventListener("click", () => { document.querySelector("#tools-menu").hidden = true; imageInput.click(); });
+const textFileInput = document.querySelector("#text-file-input");
+document.querySelector("#attach-text-button").addEventListener("click", () => { document.querySelector("#tools-menu").hidden = true; textFileInput.click(); });
+textFileInput.addEventListener("change", async () => {
+  const file = textFileInput.files?.[0];
+  textFileInput.value = "";
+  if (!file) return;
+  if (file.size > 12000) { showError("Choose a text or code file under 12 KB."); return; }
+  try {
+    const contents = await file.text();
+    if (contents.length > 3000) { showError("That file is too long to attach here. Keep text or code files under 3,000 characters."); return; }
+    const fence = String.fromCharCode(96).repeat(3);
+    const addition = `Please review this file (${file.name}):\n\n${fence}\n${contents}\n${fence}`;
+    if ((input.value + (input.value ? "\n\n" : "") + addition).length > 4000) { showError("There isn’t enough room in the message for that file. Start a new message or use a smaller file."); return; }
+    input.value = `${input.value}${input.value ? "\n\n" : ""}${addition}`;
+    input.focus();
+    refreshInput();
+  } catch { showError("That file couldn’t be read. Please choose it again."); }
+});
+document.querySelector("#insert-code-button").addEventListener("click", () => {
+  const addition = "```\n\n```";
+  if ((input.value + addition).length > 4000) return showError("There isn’t enough room in the message for a code block.");
+  input.value += `${input.value ? "\n\n" : ""}${addition}`;
+  document.querySelector("#tools-menu").hidden = true;
+  input.focus();
+  refreshInput();
+});
+document.querySelector("#switch-mode-button").addEventListener("click", () => {
+  setMode(mode === "chat" ? "script" : "chat");
+  resetChat();
+  document.querySelector("#tools-menu").hidden = true;
+});
+document.querySelector("#model-picker-button").addEventListener("click", (event) => {
+  event.stopPropagation();
+  const menu = document.querySelector("#model-menu");
+  menu.hidden = !menu.hidden;
+  document.querySelector("#model-picker-button").setAttribute("aria-expanded", String(!menu.hidden));
+  document.querySelector("#tools-menu").hidden = true;
+  document.querySelector("#tools-button").setAttribute("aria-expanded", "false");
+});
+async function loadPreferences() {
+  try { const result = await api("/api/preferences"); personalization = result.preferences || personalization; } catch {}
+  renderPersonalizationSettings();
+}
+function renderPersonalizationSettings() {
+  const toggle = document.querySelector("#memory-enabled-setting");
+  const field = document.querySelector("#memory-setting");
+  const chatField = document.querySelector("#chat-memory-setting");
+  const depth = document.querySelector("#context-depth-setting");
+  const style = document.querySelector("#response-style-setting");
+  const aboutYou = document.querySelector("#custom-about-setting");
+  const responseInstructions = document.querySelector("#custom-response-setting");
+  if (!toggle || !field || !chatField || !depth || !style || !aboutYou || !responseInstructions) return;
+  toggle.checked = personalization.useMemory; field.value = personalization.memory; depth.value = String(personalization.contextDepth); style.value = personalization.responseStyle || "auto";
+  aboutYou.value = personalization.aboutYou || "";
+  responseInstructions.value = personalization.responseInstructions || "";
+  chatField.value = conversationMemory; chatField.disabled = !conversationId;
+  chatField.placeholder = conversationId ? "Only Nivli in this chat will use this note." : "Start a conversation to add a chat-only memory.";
+  updateComposerContextLabel();
+}
+function updateComposerContextLabel() {
+  const contextLabel = document.querySelector("#composer-context-label");
+  if (contextLabel) contextLabel.textContent = webSearchEnabled ? "Always search · sources included" : "Auto-search current questions · settings";
+}
+function updateWebSearchButton() {
+  const button = document.querySelector("#toggle-web-search-button");
+  if (!button) return;
+  button.setAttribute("aria-pressed", String(webSearchEnabled));
+  button.querySelector("strong").textContent = webSearchEnabled ? "Use automatic search" : "Always search the web";
+  button.querySelector("small").textContent = webSearchEnabled ? "Current questions are already searched automatically" : "Search every message and attach source links";
+  updateComposerContextLabel();
+}
+async function savePersonalization() {
+  const button = document.querySelector("#save-memory-setting");
+  const status = document.querySelector("#memory-save-status");
+  const memory = document.querySelector("#memory-setting").value.trim();
+  const chatMemory = document.querySelector("#chat-memory-setting").value.trim();
+  const aboutYou = document.querySelector("#custom-about-setting").value.trim();
+  const responseInstructions = document.querySelector("#custom-response-setting").value.trim();
+  if ([memory, chatMemory, aboutYou, responseInstructions].some(value => value.length > 1200)) { status.textContent = "Keep each note or instruction under 1,200 characters."; return; }
+  button.disabled = true; status.textContent = "Saving…";
+  try {
+    const result = await api("/api/preferences", { method: "PATCH", body: JSON.stringify({ useMemory: document.querySelector("#memory-enabled-setting").checked, memory, aboutYou, responseInstructions, contextDepth: Number(document.querySelector("#context-depth-setting").value), responseStyle: document.querySelector("#response-style-setting").value }) });
+    personalization = result.preferences;
+    if (conversationId) {
+      const chatResult = await api("/api/conversations/" + encodeURIComponent(conversationId) + "/memory", { method: "PATCH", body: JSON.stringify({ memory: chatMemory }) });
+      conversationMemory = chatResult.memory;
+      if (pending) pending.chatMemory = conversationMemory;
+      status.textContent = "Saved custom instructions, account memory, and this chat’s memory.";
+    } else { status.textContent = "Saved custom instructions and account memory. Chat-only memory is available after you start a conversation."; }
+    updateComposerContextLabel();
+  } catch (error) { status.textContent = error.message || "Could not save. Try again."; }
+  finally { button.disabled = false; }
+}
+const settingsDescriptions = {
+  general: "Choose how Nivli behaves in your chats.",
+  appearance: "Make Nivli more comfortable to read.",
+  personalization: "Control response style, chat context, and saved memories.",
+  account: "View the account connected to Nivli."
+};
+function setSettingsPanel(category) {
+  const tab = document.querySelector(`[data-settings-tab="${category}"]`);
+  const panel = document.querySelector(`[data-settings-panel="${category}"]`);
+  if (!tab || !panel) return;
+  document.querySelectorAll("[data-settings-tab]").forEach(button => {
+    const active = button === tab;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-current", active ? "page" : "false");
+  });
+  document.querySelectorAll("[data-settings-panel]").forEach(section => { section.hidden = section !== panel; });
+  document.querySelector("#settings-title").textContent = tab.querySelector("span").textContent;
+  document.querySelector("#settings-description").textContent = settingsDescriptions[category];
+  document.querySelector(".settings-content").scrollTop = 0;
+}
+document.querySelectorAll("[data-settings-tab]").forEach(button => button.addEventListener("click", () => setSettingsPanel(button.dataset.settingsTab)));
+document.querySelector("#settings-search").addEventListener("input", event => {
+  const query = event.target.value.trim().toLocaleLowerCase();
+  const tabs = [...document.querySelectorAll("[data-settings-tab]")];
+  const visible = tabs.filter(tab => tab.textContent.toLocaleLowerCase().includes(query));
+  tabs.forEach(tab => { tab.hidden = !visible.includes(tab); });
+  document.querySelector("#settings-no-results").hidden = visible.length > 0;
+  if (visible.length && !visible.some(tab => tab.classList.contains("active"))) setSettingsPanel(visible[0].dataset.settingsTab);
+  if (!visible.length) {
+    document.querySelectorAll("[data-settings-panel]").forEach(panel => { panel.hidden = true; });
+    document.querySelector("#settings-title").textContent = "No results";
+    document.querySelector("#settings-description").textContent = "Try a different settings search.";
+  }
+});
+function openSettings() {
+  profileMenu.hidden = true;
+  document.querySelector("#profile-button").setAttribute("aria-expanded", "false");
+  const accountName = account?.name || account?.username || "Nivli account";
+  document.querySelector("#settings-account-name").textContent = accountName;
+  document.querySelector("#settings-account-avatar").textContent = accountName.trim().charAt(0).toLocaleUpperCase() || "N";
+  document.querySelector("#settings-account-label").textContent = (account?.username ? "@" + account.username + " · " : "") + (account?.email || "Signed in with Google");
+  document.querySelector("#text-size-setting").value = textSize;
+  document.querySelector("#enter-send-setting").checked = enterToSend;
+  renderPersonalizationSettings();
+  document.querySelector("#memory-save-status").textContent = "Account memory is sent only when enabled; chat memory is sent only in this conversation.";
+  document.querySelectorAll("[data-setting-theme]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.settingTheme === (localStorage.getItem("luma-theme") || "system"))));
+  document.querySelector("#settings-search").value = "";
+  document.querySelectorAll("[data-settings-tab]").forEach(button => { button.hidden = false; });
+  document.querySelector("#settings-no-results").hidden = true;
+  setSettingsPanel("general");
+  document.querySelector("#settings-dialog").showModal();
+}
+document.querySelector("#open-settings").addEventListener("click", openSettings);
+document.querySelector("#settings-close").addEventListener("click", () => document.querySelector("#settings-dialog").close());
+document.querySelector("#save-memory-setting").addEventListener("click", savePersonalization);
+document.querySelector("#clear-memory-setting").addEventListener("click", async () => {
+  if (!window.confirm("Clear your custom instructions, saved account memory, and this conversation’s memory?")) return;
+  document.querySelector("#memory-setting").value = "";
+  document.querySelector("#chat-memory-setting").value = "";
+  document.querySelector("#custom-about-setting").value = "";
+  document.querySelector("#custom-response-setting").value = "";
+  await savePersonalization();
+});
+document.querySelector("#toggle-web-search-button").addEventListener("click", () => {
+  webSearchEnabled = !webSearchEnabled;
+  if (pending) pending.webSearch = webSearchEnabled;
+  updateWebSearchButton();
+  document.querySelector("#tools-menu").hidden = true;
+  document.querySelector("#tools-button").setAttribute("aria-expanded", "false");
+});
+document.querySelector("#settings-dialog").addEventListener("click", event => { if (event.target === event.currentTarget) event.currentTarget.close(); });
+document.querySelectorAll("[data-setting-theme]").forEach(button => button.addEventListener("click", () => {
+  const preference = button.dataset.settingTheme;
+  try { localStorage.setItem("luma-theme", preference); } catch {}
+  applyTheme(preference);
+  document.querySelectorAll("[data-setting-theme]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+}));
+const accentInput = document.querySelector("#custom-accent-setting");
+if (accentInput) { accentInput.value = customAccent; ["input", "change"].forEach(type => accentInput.addEventListener(type, event => applyCustomAccent(event.target.value))); }
+const surfaceInput = document.querySelector("#custom-surface-setting");
+if (surfaceInput) { surfaceInput.value = customSurface; ["input", "change"].forEach(type => surfaceInput.addEventListener(type, event => applyCustomSurface(event.target.value))); }
+const glowInput = document.querySelector("#custom-glow-setting");
+if (glowInput) { glowInput.value = customGlow; ["input", "change"].forEach(type => glowInput.addEventListener(type, event => applyCustomGlow(event.target.value))); }
+document.querySelector("#text-size-setting").addEventListener("change", event => {
+  textSize = event.target.value;
+  document.documentElement.dataset.textSize = textSize;
+  try { localStorage.setItem("luma-text-size", textSize); } catch {}
+});
+document.querySelector("#enter-send-setting").addEventListener("change", event => {
+  enterToSend = event.target.checked;
+  try { localStorage.setItem("luma-enter-to-send", String(enterToSend)); } catch {}
+});
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".popover-anchor")) {
+    document.querySelector("#tools-menu").hidden = true;
+    document.querySelector("#model-menu").hidden = true;
+    document.querySelector("#tools-button").setAttribute("aria-expanded", "false");
+    document.querySelector("#model-picker-button").setAttribute("aria-expanded", "false");
+  }
+});
+async function addImageFiles(files) {
+  const incoming = [...files];
+  if (selectedImages.length + incoming.length > 3) { showError("Attach up to 3 images per message."); return; }
+  for (const file of incoming) {
+    if (!/^(image\/(jpeg|png|webp))$/.test(file.type)) { showError("Choose a JPEG, PNG, or WebP image."); continue; }
+    if (file.size > 2 * 1024 * 1024) { showError("Each image must be under 2 MB."); continue; }
+    try {
+      const data = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+      selectedImages.push({ name: file.name, type: file.type, data });
+    } catch { showError("That image couldn’t be read. Please choose it again."); }
+  }
+  renderSelectedImages();
+  refreshInput();
+}
+imageInput.addEventListener("change", async () => {
+  await addImageFiles(imageInput.files);
+  imageInput.value = "";
+});
+form.addEventListener("paste", async (event) => {
+  const items = [...(event.clipboardData?.items || [])];
+  const imageItems = items.filter((item) => item.type.startsWith("image/"));
+  if (!imageItems.length) return;
+  const files = imageItems.map((item, index) => {
+    const file = item.getAsFile();
+    if (!file) return null;
+    const extension = file.type === "image/jpeg" ? "jpg" : file.type.split("/")[1] || "png";
+    return new File([file], `pasted-image-${index + 1}.${extension}`, { type: file.type });
+  }).filter(Boolean);
+  if (!files.length) return;
+  event.preventDefault();
+  await addImageFiles(files);
+});
+document.addEventListener("keydown", (event) => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k" && !chatScreen.hidden) { event.preventDefault(); resetChat(); } });
+const profileButton = document.querySelector("#profile-button");
+const profileMenu = document.querySelector("#profile-menu");
+profileButton.addEventListener("click", () => { profileMenu.hidden = !profileMenu.hidden; profileButton.setAttribute("aria-expanded", String(!profileMenu.hidden)); });
+document.addEventListener("click", (event) => { if (!event.target.closest(".profile-wrap")) { profileMenu.hidden = true; profileButton.setAttribute("aria-expanded", "false"); } });
+document.querySelectorAll("[data-signout]").forEach(button => button.addEventListener("click", async () => {
+  try { await api("/api/auth/signout", { method: "POST", body: "{}" }); account = null; history = []; conversationId = null; conversationList = []; renderAuth(); }
+  catch { window.alert("Sign-out could not be confirmed. Please try again."); }
+}));
+async function boot() {
+  try {
+    [config] = await Promise.all([api("/api/config")]);
+    const me = await api("/api/me");
+    account = me.account;
+    if (account) {
+      if (account.complete) enterChat();
+      else renderOnboarding();
+    } else renderAuth();
+  } catch {
+    config = config || { googleClientId: null };
+    authNotice.textContent = "Nivli couldn't check sign-in right now. Please refresh the page.";
+    renderAuth();
+  }
+}
+setInterval(updateTimeGreeting, 60000);
+boot();
+</script>
+</body></html>
+
+
+
+
+
+
+
+

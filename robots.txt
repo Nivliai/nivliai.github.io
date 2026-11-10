@@ -1,0 +1,28 @@
+# robots.txt for Nivli
+# Replace YOUR-DOMAIN.com with your real domain before uploading.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /memory
+
+# Block aggressive scrapers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
